@@ -31,7 +31,7 @@ def run():
     parts = tuple(int(n) for n in version.lstrip('v').split('.'))
     if parts[0] != 22 or parts < (22, 23, 2):
         raise RuntimeError('Select isolated Node 22.23.2 or a reviewed later 22.x runtime.')
-    if (STAGE / 'node_modules').exists():
+    if (STAGE / 'node_modules').exists() or (ROOT / 'node_modules').exists() or (ROOT / 'node_modules').is_symlink():
         raise RuntimeError('Existing installation found; inspect it before another install.')
     original = (ROOT / 'package-lock.json').read_bytes()
     original_sha = hashlib.sha256(original).hexdigest()
@@ -124,8 +124,10 @@ def run():
     target = ROOT / 'node_modules'
     if target.exists() or target.is_symlink():
         raise RuntimeError('Install succeeded; refusing to replace an existing node_modules automatically.')
-    target.symlink_to(Path('.evaluation-install/node_modules'), target_is_directory=True)
-    print('LINKED_EVALUATION_DEPENDENCIES', flush=True)
+    # Keep a conventional project-local package layout for build tooling.
+    # The separate manifests and receipts remain in the staging directory.
+    (STAGE / 'node_modules').rename(target)
+    print('INSTALLED_PROJECT_LOCAL_DEPENDENCIES', flush=True)
     return 0
 
 if __name__ == '__main__':

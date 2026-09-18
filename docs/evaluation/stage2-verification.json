@@ -31,7 +31,8 @@
       "install_hooks_enabled": false,
       "original_app_lock_modified": false
     },
-    "electron_binary_installer": "Reviewed and explicitly executed; initial lifecycle hooks were not broadly re-enabled"
+    "electron_binary_installer": "Reviewed and explicitly executed; initial lifecycle hooks were not broadly re-enabled",
+    "final_layout": "Conventional project-local node_modules; derived manifests/archives remain in .evaluation-install. No original runtime dependency upgrades."
   },
   "tests": {
     "profile": {
@@ -68,6 +69,17 @@
         "NAT traversal",
         "background scheduling"
       ]
+    },
+    "full_desktop_jest": {
+      "suites_passed": 108,
+      "suites_failed": 0,
+      "tests_passed": 722,
+      "tests_failed": 0,
+      "snapshots_passed": 13,
+      "snapshots_failed": 0,
+      "node": "22.23.2",
+      "command": "npm test -- --runInBand",
+      "note": "Selected Electron tests are a subset of these 722, not additional tests."
     }
   },
   "policy_probe": {
@@ -201,5 +213,19 @@
     "Mobile background behavior",
     "Independent release signing and update channels"
   ],
-  "release_allowed": false
+  "release_allowed": false,
+  "followup": {
+    "initial_pre_push": "Failed under default Node19, including File-global mock failure and theme snapshots. Push was blocked, not bypassed.",
+    "node22_before_snapshot_review": {
+      "suites_failed": 6,
+      "suites_passed": 102,
+      "tests_failed": 11,
+      "tests_passed": 711,
+      "snapshot_failures": 11
+    },
+    "snapshot_review": "Exactly two generated theme class identifiers in 11 snapshots updated; no behavior assertions removed. See snapshot-review.json.",
+    "module_layout_probe": "Conventional layout did not resolve original theme snapshot mismatch; original mismatch root cause not established.",
+    "source_ui_modifications": false,
+    "hooks_disabled": false
+  }
 }

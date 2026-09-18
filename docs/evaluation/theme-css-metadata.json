@@ -1,0 +1,33 @@
+{
+  "scope": "Locked UI kit CSS metadata; no source or token changes",
+  "tokens.css.js": {
+    "metadata": {
+      "stylex": [
+        [
+          "x13zp6ng",
+          {
+            "ltr": ":root, .x13zp6ng{--x5dck5f:#080A05;--xvc9p7b:#15180E;--xvmni1i:#16181B;--x100v9bd:#FDCA40;--xndntpk:#B0D944;--xljc9ms:#8AE081;--xnc7uey:#BAE061;--x559yof:#98C328;--xlzp8jo:#212814;--xkn4l5n:#2C3618;--x19ov2yu:#212814;--x8tymf5:#D13B3D;--x1it0r4:#421010;--xkpheab:#FFFFFF;--x1jl3qfu:#08090C;--xhvjuk:#67707E;--xdvs5bh:#BDC3AC;--xcipzsd:#435123;--xh98mmj:#D13B3D;--xq3s598:#212814;--x1x8nib0:#252937;--x9u6wqr:#2C3618;--x1malvo9:#3D403F;--x7uluoa:rgba(8, 10, 5, 0.72);--x1ks2372:#D1383D;--xyvgdhz:#D7D245;--x1pvo0kd:#B0D944;--x155na3n:#F6F6F6;--xghgr2w:#BADE5B;--xm6mswf:#FFFFFF;--x1h23z6d:2px;--xvyuclb:4px;--xqtqlen:6px;--x1d0vqlq:8px;--x130i74s:10px;--x17y1lnc:12px;--xvtfdil:16px;--xlmo8nu:20px;--x3q97fs:24px;--xfrw9ca:32px;--xmgn68e:40px;--x19ahcm4:48px;--x10v21l4:60px;--x1m5tti6:6px;--x1feh7j9:8px;--xxckfyn:16px;--xmbgtj:20px;--x60srt4:26px;--xjarf6w:0 185px 52px 0 rgba(8,10,5,0.01), 0 118px 47px 0 rgba(8,10,5,0.06), 0 67px 40px 0 rgba(8,10,5,0.20), 0 30px 30px 0 rgba(8,10,5,0.34), 0 7px 16px 0 rgba(8,10,5,0.39);--x1uzj2we:Inter;--x1io7ctu:Humble Nostalgia;--x18kkdrt:12px;--x9pvprj:14px;--xu4ncir:16px;--x1knede8:24px;--x1wvt6p4:28px;--x1cm8kij:400;--x1yym3h:500;}",
+            "rtl": null
+          },
+          0.1
+        ]
+      ]
+    },
+    "code": "import { defaultStyles as _rsdDefaultStyles, merge as _rsdMerge } from \"react-strict-dom/runtime\";\n// AUTO-GENERATED — do not edit directly.\n// Source: src/theme/tokens.json  |  Generator: scripts/generate-tokens.mjs\n// Run `npm run generate-tokens` to update.\nimport { css } from 'react-strict-dom';\nexport const tokens = {\n  colorBackground: \"var(--x5dck5f)\",\n  colorSurfacePrimary: \"var(--xvc9p7b)\",\n  colorSurfaceSearchField: \"var(--xvmni1i)\",\n  colorSurfaceSecondary: \"var(--x100v9bd)\",\n  colorPrimary: \"var(--xndntpk)\",\n  colorSecondary: \"var(--xljc9ms)\",\n  colorAccentHover: \"var(--xnc7uey)\",\n  colorAccentActive: \"var(--x559yof)\",\n  colorSurfaceHover: \"var(--xlzp8jo)\",\n  colorSurfaceElevatedOnInteraction: \"var(--xkn4l5n)\",\n  colorSurfaceDisabled: \"var(--x19ov2yu)\",\n  colorSurfaceDestructiveElevated: \"var(--x8tymf5)\",\n  colorSurfaceDestructive: \"var(--x1it0r4)\",\n  colorTextPrimary: \"var(--xkpheab)\",\n  colorOnPrimary: \"var(--x1jl3qfu)\",\n  colorTextSearchField: \"var(--xhvjuk)\",\n  colorTextSecondary: \"var(--xdvs5bh)\",\n  colorTextDisabled: \"var(--xcipzsd)\",\n  colorTextDestructive: \"var(--xh98mmj)\",\n  colorBorderPrimary: \"var(--xq3s598)\",\n  colorBorderSearchField: \"var(--x1x8nib0)\",\n  colorBorderSecondary: \"var(--x9u6wqr)\",\n  colorBorderTertiary: \"var(--x1malvo9)\",\n  colorScrim: \"var(--x7uluoa)\",\n  colorSurfaceError: \"var(--x1ks2372)\",\n  colorSurfaceWarning: \"var(--xyvgdhz)\",\n  colorFocusRing: \"var(--x1pvo0kd)\",\n  colorTextTertiary: \"var(--x155na3n)\",\n  colorLinkText: \"var(--xghgr2w)\",\n  backgroundSnackbar: \"var(--xm6mswf)\",\n  spacing2: \"var(--x1h23z6d)\",\n  spacing4: \"var(--xvyuclb)\",\n  spacing6: \"var(--xqtqlen)\",\n  spacing8: \"var(--x1d0vqlq)\",\n  spacing10: \"var(--x130i74s)\",\n  spacing12: \"var(--x17y1lnc)\",\n  spacing16: \"var(--xvtfdil)\",\n  spacing20: \"var(--xlmo8nu)\",\n  spacing24: \"var(--x3q97fs)\",\n  spacing32: \"var(--xfrw9ca)\",\n  spacing40: \"var(--xmgn68e)\",\n  spacing48: \"var(--x19ahcm4)\",\n  spacing60: \"var(--x10v21l4)\",\n  radius6: \"var(--x1m5tti6)\",\n  radius8: \"var(--x1feh7j9)\",\n  radius16: \"var(--xxckfyn)\",\n  radius20: \"var(--xmbgtj)\",\n  radius26: \"var(--x60srt4)\",\n  shadowMenu: \"var(--xjarf6w)\",\n  fontPrimary: \"var(--x1uzj2we)\",\n  fontDisplay: \"var(--x1io7ctu)\",\n  fontSize12: \"var(--x18kkdrt)\",\n  fontSize14: \"var(--x9pvprj)\",\n  fontSize16: \"var(--xu4ncir)\",\n  fontSize24: \"var(--x1knede8)\",\n  fontSize28: \"var(--x1wvt6p4)\",\n  weightRegular: \"var(--x1cm8kij)\",\n  weightMedium: \"var(--x1yym3h)\",\n  __varGroupHash__: \"x13zp6ng\"\n};"
+  },
+  "themes/dark.css.js": {
+    "metadata": {
+      "stylex": [
+        [
+          "xet4sn1",
+          {
+            "ltr": ".xet4sn1, .xet4sn1:root{--xm6mswf:#FFFFFF;--x559yof:#98C328;--xnc7uey:#BAE061;--x5dck5f:#080A05;--xq3s598:#212814;--x1x8nib0:#252937;--x9u6wqr:#2C3618;--x1malvo9:#3D403F;--x1pvo0kd:#B0D944;--xghgr2w:#BADE5B;--x1jl3qfu:#08090C;--xndntpk:#B0D944;--x7uluoa:rgba(8, 10, 5, 0.72);--xljc9ms:#8AE081;--x1it0r4:#421010;--x8tymf5:#D13B3D;--x19ov2yu:#212814;--xkn4l5n:#2C3618;--x1ks2372:#D1383D;--xlzp8jo:#212814;--xvc9p7b:#15180E;--xvmni1i:#16181B;--x100v9bd:#FDCA40;--xyvgdhz:#D7D245;--xh98mmj:#D13B3D;--xcipzsd:#435123;--xkpheab:#FFFFFF;--xhvjuk:#67707E;--xdvs5bh:#BDC3AC;--x155na3n:#F6F6F6;--x1io7ctu:Humble Nostalgia;--x1uzj2we:Inter;--x18kkdrt:12px;--x9pvprj:14px;--xu4ncir:16px;--x1knede8:24px;--x1wvt6p4:28px;--xxckfyn:16px;--xmbgtj:20px;--x60srt4:26px;--x1m5tti6:6px;--x1feh7j9:8px;--xjarf6w:0 185px 52px 0 rgba(8,10,5,0.01), 0 118px 47px 0 rgba(8,10,5,0.06), 0 67px 40px 0 rgba(8,10,5,0.20), 0 30px 30px 0 rgba(8,10,5,0.34), 0 7px 16px 0 rgba(8,10,5,0.39);--x130i74s:10px;--x17y1lnc:12px;--xvtfdil:16px;--x1h23z6d:2px;--xlmo8nu:20px;--x3q97fs:24px;--xfrw9ca:32px;--xvyuclb:4px;--xmgn68e:40px;--x19ahcm4:48px;--xqtqlen:6px;--x10v21l4:60px;--x1d0vqlq:8px;--x1yym3h:500;--x1cm8kij:400;}",
+            "rtl": null
+          },
+          0.5
+        ]
+      ]
+    },
+    "code": "import { defaultStyles as _rsdDefaultStyles, merge as _rsdMerge } from \"react-strict-dom/runtime\";\n// AUTO-GENERATED — do not edit directly.\n// Source: src/theme/tokens.json  |  Generator: scripts/generate-tokens.mjs\n// Run `npm run generate-tokens` to update.\nimport { css } from 'react-strict-dom';\nimport { tokens } from '../tokens.css';\nexport const darkThemeStyle = {\n  x13zp6ng: \"xet4sn1 x13zp6ng\",\n  $$css: true\n};"
+  }
+}

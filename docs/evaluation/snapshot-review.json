@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-18",
+  "scope": "Only generated ThemeProvider class identifiers in 11 existing snapshots",
+  "from": "x1aw8gp0 xzu4p3z",
+  "to": "xet4sn1 x13zp6ng",
+  "files": [
+    {
+      "file": "src/components/Overlay/__snapshots__/index.test.js.snap",
+      "replacements": 1,
+      "before_sha256": "65b2cf53055000924bf3051b8cdebe02b41e559c9fd4d9a8062ee41c447a8af8"
+    },
+    {
+      "file": "src/components/RadioSelect/__snapshots__/index.test.js.snap",
+      "replacements": 1,
+      "before_sha256": "b101b8c2d95959ff67e9851df2dbd33e9d568209950e58e264c3093d8fabf530"
+    },
+    {
+      "file": "src/components/LoadingOverlay/__snapshots__/index.test.js.snap",
+      "replacements": 1,
+      "before_sha256": "a49aaa20685c6096ddc338e5bc40b1046803b02ba36b955019ea743727108e78"
+    },
+    {
+      "file": "src/components/FormModalHeaderWrapper/__snapshots__/index.test.js.snap",
+      "replacements": 4,
+      "before_sha256": "3ebea438702daf715619f30e1dccfef4c2a78ca758339e8a3215b2b41343b649"
+    },
+    {
+      "file": "src/lib-react-components/components/InputField/__snapshots__/index.test.js.snap",
+      "replacements": 2,
+      "before_sha256": "a3864f141b2bca642c8038d8f6d7f0fcc6064d6341a5aef19a346e3248176366"
+    },
+    {
+      "file": "src/lib-react-components/components/TextArea/__snapshots__/index.test.js.snap",
+      "replacements": 2,
+      "before_sha256": "63834ca6474cfce86e66f71dfe1db85c6d3a9381ca366f64f121781fba5ce860"
+    }
+  ],
+  "production_ui_source_changed": false,
+  "snapshot_structure_or_content_changed": false,
+  "assertions_removed": false,
+  "basis": "New identifiers were resolved to css.defineVars and dark theme CSS output from the exact app-locked UI-kit commit; visual regression not independently verified.",
+  "initial_normal_module_path_probe": "Did not remove the mismatch; no assertion that staging paths caused it."
+}
