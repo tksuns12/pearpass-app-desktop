@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-18",
+  "scope": "dependency-free bootstrap tests only; NOT full app or security certification",
+  "environment": {
+    "node": "19.9.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "commands": [
+    {
+      "command": "npm run eval:test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "command": "npm run eval:preflight",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expectation_met": true
+    },
+    {
+      "command": "npm run dev:eval",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expectation_met": true
+    },
+    {
+      "command": "npm run make",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "expectation_met": true
+    }
+  ],
+  "syntax_checks": "PASS",
+  "git_diff_check": "PASS",
+  "preflight": {
+    "schema_version": 1,
+    "scope": "evaluation-bootstrap",
+    "node": "19.9.0",
+    "checks": [
+      {
+        "id": "NODE_BASELINE",
+        "status": "BLOCKED",
+        "detail": "actual=19.9.0; upstream=22.12.0; same-major >= baseline required; select a reviewed patched runtime"
+      },
+      {
+        "id": "LOCKFILE_UNCHANGED",
+        "status": "PASS",
+        "detail": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08"
+      },
+      {
+        "id": "DEPENDENCIES_UNCHANGED",
+        "status": "PASS",
+        "detail": "No dependency upgrade is part of this bootstrap"
+      },
+      {
+        "id": "UPSTREAM_OTA_OFF",
+        "status": "PASS",
+        "detail": "App OTA channels and package publish targets must be empty"
+      },
+      {
+        "id": "RELEASE_SCRIPTS_BLOCKED",
+        "status": "PASS",
+        "detail": "Supported package/release scripts must fail closed"
+      },
+      {
+        "id": "DEPENDENCIES_PRESENT",
+        "status": "BLOCKED",
+        "detail": "not installed: node_modules/electron/package.json, node_modules/@tetherto/pearpass-lib-vault-core/package.json"
+      },
+      {
+        "id": "CORE_BASELINE_DIVERGENCE",
+        "status": "REVIEW",
+        "detail": "app lock=a2f686326cd41b14782be78168a04dfaa31beaa6; fork main=7c833475a7335a0a7b1d340c474433af8be23289; do not silently substitute"
+      },
+      {
+        "id": "NETWORK_ISOLATION",
+        "status": "NOT_RUN",
+        "detail": "Disabling OTA is NOT proof of LAN-only or zero external infrastructure"
+      },
+      {
+        "id": "five_platform_build",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "a_to_b_to_c_replication",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "concurrent_secret_conflicts",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "revocation_and_key_rotation",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "cold_lan_pairing_without_external_services",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "crash_recovery_and_backup_restore",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "mobile_background_sync",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      }
+    ],
+    "blocked": true
+  },
+  "not_performed": [
+    "npm dependency installation",
+    "Electron app launch",
+    "native packaging",
+    "real secret import",
+    "public network P2P tests",
+    "five-platform build",
+    "GitHub Actions workflow run"
+  ],
+  "global_toolchain_changed": false
+}

@@ -1,3 +1,7 @@
+<!-- Modified for independent evaluation, 2026-09-18. -->
+> **Independent evaluation branch — dummy data only. Not an official PearPass release.**
+> See [evaluation setup and verified scope](docs/evaluation/README.md). Do not follow the upstream installation steps below yet.
+
 <p align="center">
   <img src="assets/images/logo.png" alt="Pearpass logo" width="264"/>
 </p>

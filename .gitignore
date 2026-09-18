@@ -71,3 +71,5 @@ test-results
 out/
 
 src/PearPass
+# Added for independent evaluation, 2026-09-18.
+.evaluation-reports/

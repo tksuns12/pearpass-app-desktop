@@ -1,14 +1,14 @@
 {
   "name": "pearpass-app-desktop",
-  "productName": "PearPass",
+  "productName": "Local Vault Evaluation",
   "version": "2.2.0",
   "description": "PearPass password manager",
   "author": "PearPass",
   "main": "electron/main.cjs",
-  "upgrade": "pear://dbkezmhetxwo95ab1kcojfraw1eryzf7kex5cahykf6b9c3amd6o",
-  "legacyChannelLink": "pear://tywsat7gz8m65ejx4zjn3773pbdc4j8m66tukis8dgzekraymtzo",
+  "upgrade": null,
+  "legacyChannelLink": null,
   "build": {
-    "appId": "com.pears.pass",
+    "appId": "io.github.tksuns12.localvault.evaluation",
     "icon": "assets/darwin/icon.png",
     "asar": false,
     "files": [
@@ -50,13 +50,7 @@
     "toolsets": {
       "appimage": "1.0.2"
     },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "tetherto",
-        "repo": "pearpass-app-desktop"
-      }
-    ]
+    "publish": []
   },
   "pear": {
     "name": "pearpass-app-desktop",
@@ -70,10 +64,7 @@
       "width": "1440",
       "minWidth": "816"
     },
-    "links": [
-      "https://hooks.slack.com/services/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",
-      "https://docs.google.com/forms/d/e/1FAIpQLScLltvRe64VzMDRzOVjGtHWZ3KafLC2zzvkEoJfTzJkFd67OA/*"
-    ],
+    "links": [],
     "stage": {
       "entrypoints": [],
       "prefetch": [
@@ -116,27 +107,30 @@
     "electron": "electron .",
     "dev": "concurrently -n \"TypeScript,Bundle,Bridge,Electron\" -c \"blue,cyan,magenta,green\" \"node node_modules/typescript/bin/tsc --watch\" \"node scripts/bundle-renderer.mjs --watch\" \"node scripts/bundle-bridge.mjs --watch\" \"wait-on dist/renderer.bundle.js && electron .\"",
     "dev:reset": "PEARPASS_DEV_RESET=1 npm run dev",
-    "dist:prepare:dev": "npm install && npm run build && npm prune --omit=dev && npm install electron --no-save",
-    "dist:mac:arm64": "npx electron-builder --mac --arm64 -c electron-builder.mac.json --publish never",
-    "dist:mac:x64": "npx electron-builder --mac --x64 -c electron-builder.mac.json --publish never",
-    "dist:mac:arm64:dev": "SKIP_NOTARIZE=true CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist:mac:arm64",
-    "dist:mac:x64:dev": "SKIP_NOTARIZE=true CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist:mac:x64",
-    "dist:win:x64": "electron-forge make --platform=win32 --arch=x64",
-    "dist:win:arm64": "electron-forge make --platform=win32 --arch=arm64",
-    "dist:linux:x64": "npx electron-builder --linux --x64 -c electron-builder.linux.json --publish never",
-    "dist:linux:arm64": "npx electron-builder --linux --arm64 -c electron-builder.linux.json --publish never",
-    "make": "npm run build:prod && npm run dist:win:x64 && npm run dist:win:arm64",
-    "dist:snap:x64": "npx electron-builder --linux snap --x64 --publish never",
-    "dist:snap:arm64": "npx electron-builder --linux snap --arm64 --publish never",
-    "dist:snap:x64:dev": "npm run dist:prepare:dev && dist:snap:x64 && npm install",
-    "dist:snap:arm64:dev": "npm run dist:prepare:dev && dist:snap:arm64 && npm install",
-    "pear:build:darwin:arm64": "npx pear-build --package=./package.json --darwin-arm64-app ./out/mac-arm64/PearPass.app --target ../pearpass-app-desktop-$npm_package_version",
-    "pear:build:darwin:x64": "npx pear-build --package=./package.json --darwin-x64-app ./out/mac/PearPass.app --target ../pearpass-app-desktop-$npm_package_version",
-    "pear:build:linux:x64": "npx pear-build --package=./package.json --linux-x64-app ./out/PearPass.AppImage --target ../pearpass-app-desktop-$npm_package_version",
-    "pear:build:linux:arm64": "npx pear-build --package=./package.json --linux-arm64-app ./out/PearPass.AppImage --target ../pearpass-app-desktop-$npm_package_version",
-    "pear:build:win:x64": "npx pear-build --package=./package.json --win32-x64-app ./out/PearPass/PearPass.msix --target ../pearpass-app-desktop-%npm_package_version%",
-    "pear:build:win:arm64": "npx pear-build --package=./package.json --win32-arm64-app ./out/PearPass/PearPass.msix --target ../pearpass-app-desktop-%npm_package_version%",
-    "knip": "knip"
+    "dist:prepare:dev": "node scripts/evaluation/block-release.mjs",
+    "dist:mac:arm64": "node scripts/evaluation/block-release.mjs",
+    "dist:mac:x64": "node scripts/evaluation/block-release.mjs",
+    "dist:mac:arm64:dev": "node scripts/evaluation/block-release.mjs",
+    "dist:mac:x64:dev": "node scripts/evaluation/block-release.mjs",
+    "dist:win:x64": "node scripts/evaluation/block-release.mjs",
+    "dist:win:arm64": "node scripts/evaluation/block-release.mjs",
+    "dist:linux:x64": "node scripts/evaluation/block-release.mjs",
+    "dist:linux:arm64": "node scripts/evaluation/block-release.mjs",
+    "make": "node scripts/evaluation/block-release.mjs",
+    "dist:snap:x64": "node scripts/evaluation/block-release.mjs",
+    "dist:snap:arm64": "node scripts/evaluation/block-release.mjs",
+    "dist:snap:x64:dev": "node scripts/evaluation/block-release.mjs",
+    "dist:snap:arm64:dev": "node scripts/evaluation/block-release.mjs",
+    "pear:build:darwin:arm64": "node scripts/evaluation/block-release.mjs",
+    "pear:build:darwin:x64": "node scripts/evaluation/block-release.mjs",
+    "pear:build:linux:x64": "node scripts/evaluation/block-release.mjs",
+    "pear:build:linux:arm64": "node scripts/evaluation/block-release.mjs",
+    "pear:build:win:x64": "node scripts/evaluation/block-release.mjs",
+    "pear:build:win:arm64": "node scripts/evaluation/block-release.mjs",
+    "knip": "knip",
+    "eval:test": "node --test scripts/evaluation/profile.test.cjs",
+    "eval:preflight": "node scripts/evaluation/preflight.mjs",
+    "dev:eval": "node scripts/evaluation/dev.mjs"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
@@ -235,5 +229,6 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "electron-windows-msix": "git+https://github.com/chetasr/electron-windows-msix.git"
-  }
+  },
+  "x-evaluation-notice": "Modified 2026-09-18. Dummy-data evaluation only; not an official PearPass release."
 }

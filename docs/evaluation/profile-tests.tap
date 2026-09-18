@@ -1,0 +1,119 @@
+
+> pearpass-app-desktop@2.2.0 eval:test
+> node --test scripts/evaluation/profile.test.cjs
+
+TAP version 13
+# Subtest: no acknowledgement: no profile is created
+ok 1 - no acknowledgement: no profile is created
+  ---
+  duration_ms: 2.591708
+  ...
+# Subtest: packaged builds fail closed
+ok 2 - packaged builds fail closed
+  ---
+  duration_ms: 0.498541
+  ...
+# Subtest: wrong product identity fails closed
+ok 3 - wrong product identity fails closed
+  ---
+  duration_ms: 0.497792
+  ...
+# Subtest: rejects upstream pkg.upgrade
+ok 4 - rejects upstream pkg.upgrade
+  ---
+  duration_ms: 0.4335
+  ...
+# Subtest: rejects upstream pkg.legacyChannelLink
+ok 5 - rejects upstream pkg.legacyChannelLink
+  ---
+  duration_ms: 0.425916
+  ...
+# Subtest: rejects upstream config.upgrade
+ok 6 - rejects upstream config.upgrade
+  ---
+  duration_ms: 0.414916
+  ...
+# Subtest: rejects upstream config.legacyChannelLink
+ok 7 - rejects upstream config.legacyChannelLink
+  ---
+  duration_ms: 0.61675
+  ...
+# Subtest: separate profile preserves existing original profile
+ok 8 - separate profile preserves existing original profile
+  ---
+  duration_ms: 2.392417
+  ...
+# Subtest: marked profile is reusable without deleting data
+ok 9 - marked profile is reusable without deleting data
+  ---
+  duration_ms: 1.905709
+  ...
+# Subtest: unmarked existing directory is not adopted
+ok 10 - unmarked existing directory is not adopted
+  ---
+  duration_ms: 0.804125
+  ...
+# Subtest: existing file is not adopted as profile
+ok 11 - existing file is not adopted as profile
+  ---
+  duration_ms: 1.35275
+  ...
+# Subtest: modified marker is rejected
+ok 12 - modified marker is rejected
+  ---
+  duration_ms: 1.203959
+  ...
+# Subtest: profile symlinks are rejected
+ok 13 - profile symlinks are rejected
+  ---
+  duration_ms: 0.769667
+  ...
+# Subtest: marker symlinks are rejected
+ok 14 - marker symlinks are rejected
+  ---
+  duration_ms: 1.429875
+  ...
+# Subtest: session directory symlinks are rejected
+ok 15 - session directory symlinks are rejected
+  ---
+  duration_ms: 1.353958
+  ...
+# Subtest: relative appData path is rejected
+ok 16 - relative appData path is rejected
+  ---
+  duration_ms: 0.285
+  ...
+# Subtest: actual resolver with upgrade=null avoids legacy lookup
+ok 17 - actual resolver with upgrade=null avoids legacy lookup
+  ---
+  duration_ms: 0.936625
+  ...
+# Subtest: actual resolver with upgrade=undefined avoids legacy lookup
+ok 18 - actual resolver with upgrade=undefined avoids legacy lookup
+  ---
+  duration_ms: 0.558709
+  ...
+# Subtest: actual resolver with upgrade= avoids legacy lookup
+ok 19 - actual resolver with upgrade= avoids legacy lookup
+  ---
+  duration_ms: 0.536875
+  ...
+# Subtest: actual update IPC returns false without runtime
+ok 20 - actual update IPC returns false without runtime
+  ---
+  duration_ms: 0.796291
+  ...
+# Subtest: config and startup ordering retain guards
+ok 21 - config and startup ordering retain guards
+  ---
+  duration_ms: 0.52075
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 90.780292

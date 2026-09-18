@@ -1,3 +1,4 @@
+/* Modified for independent dummy-data evaluation, 2026-09-18. */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 /**
@@ -43,6 +44,8 @@ const {
 } = require('./flatpak-paths.cjs')
 const { refreshNativeHostWrapperIfPresent } = require('./nativeHostWrapper.cjs')
 const runtimeConfig = require('./runtime-config.cjs')
+const { configureEvaluationProfile } = require('./evaluation-profile.cjs')
+configureEvaluationProfile(app, pkg, runtimeConfig)
 const devicePreferences = require('../src/utils/devicePreferences.cjs')
 const {
   getLogPaths,
@@ -148,6 +151,8 @@ function getStorageDir() {
 //    userData so multiple links can coexist on the same machine.
 async function resolveRuntimeStorageDir() {
   const { legacyChannelLink, upgrade } = runtimeConfig || {}
+  // Independent evaluation: no OTA link also means no legacy-storage lookup.
+  if (!upgrade) return getStorageDir()
 
   let storageDir = getStorageDir()
   const linkId = upgrade.replace(/^pear:\/\//, '')
@@ -678,6 +683,7 @@ function registerIPC() {
   })
 
   ipcMain.handle('runtime:applyUpdate', async () => {
+    if (!pearRuntime?.updater) return false
     logger.info(
       '[MAIN]',
       'runtime:applyUpdate',
@@ -807,7 +813,7 @@ app.whenReady().then(async () => {
     logger.setLogPath(getStorageDir())
   }
   registerIPC()
-  await refreshNativeHostWrapper()
+  // Independent evaluation: do not refresh upstream browser native-host integration.
   try {
     await startRuntime()
   } catch (err) {

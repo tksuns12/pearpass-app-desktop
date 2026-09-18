@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-09-18",
+  "status": "evaluation-only; no security certification",
+  "repositories": [
+    {
+      "name": "pearpass-app-desktop",
+      "upstream": "tetherto/pearpass-app-desktop",
+      "fork": "tksuns12/pearpass-app-desktop",
+      "commit": "4378c33479368eb9e46d91c95a779551ffc0e740",
+      "node_baseline": "22.12.0",
+      "package_sha256": "e102b03e01799ab968bd06efd20589f6f217e3e218fed8aab5e7776ebec7f64e",
+      "lockfile_sha256": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08",
+      "dependency_declarations": {
+        "dependencies": {
+          "@lingui/core": "5.1.2",
+          "@lingui/format-json": "5.1.2",
+          "@lingui/macro": "5.1.2",
+          "@lingui/react": "5.1.2",
+          "@rive-app/react-webgl2": "^4.28.1",
+          "@tetherto/pear-apps-lib-feedback": "git+https://github.com/tetherto/pear-apps-lib-feedback.git",
+          "@tetherto/pear-apps-lib-ui-react-hooks": "git+https://github.com/tetherto/pear-apps-lib-ui-react-hooks.git",
+          "@tetherto/pear-apps-utils-avatar-initials": "git+https://github.com/tetherto/pear-apps-utils-avatar-initials.git",
+          "@tetherto/pear-apps-utils-date": "git+https://github.com/tetherto/pear-apps-utils-date.git",
+          "@tetherto/pear-apps-utils-generate-unique-id": "git+https://github.com/tetherto/pear-apps-utils-generate-unique-id.git",
+          "@tetherto/pear-apps-utils-pattern-search": "git+https://github.com/tetherto/pear-apps-utils-pattern-search.git",
+          "@tetherto/pear-apps-utils-qr": "git+https://github.com/tetherto/pear-apps-utils-qr.git",
+          "@tetherto/pear-apps-utils-validator": "git+https://github.com/tetherto/pear-apps-utils-validator.git",
+          "@tetherto/pearpass-lib-constants": "git+https://github.com/tetherto/pearpass-lib-constants.git",
+          "@tetherto/pearpass-lib-data-export": "git+https://github.com/tetherto/pearpass-lib-data-export.git",
+          "@tetherto/pearpass-lib-data-import": "git+https://github.com/tetherto/pearpass-lib-data-import.git",
+          "@tetherto/pearpass-lib-native-messaging-bridge": "git+https://github.com/tetherto/pearpass-lib-native-messaging-bridge.git",
+          "@tetherto/pearpass-lib-ui-kit": "github:tetherto/pearpass-lib-ui-react-native-components#design-system-v2",
+          "@tetherto/pearpass-lib-vault": "git+https://github.com/tetherto/pearpass-lib-vault.git",
+          "@tetherto/pearpass-lib-vault-core": "git+https://github.com/tetherto/pearpass-lib-vault-core.git",
+          "@tetherto/pearpass-utils-password-check": "git+https://github.com/tetherto/pearpass-utils-password-check.git",
+          "@tetherto/pearpass-utils-password-generator": "git+https://github.com/tetherto/pearpass-utils-password-generator.git",
+          "autopass": "~3.3.0",
+          "bare-os": "3.6.2",
+          "bare-subprocess": "5.2.1",
+          "buffer": "6.0.3",
+          "compact-encoding": "2.18.0",
+          "dotenv": "17.2.1",
+          "electron-updater": "^6.8.3",
+          "htm": "3.1.1",
+          "hyperblobs": "^2.11.1",
+          "hyperdht": "^6.29.6",
+          "hyperdrive": "^13.3.2",
+          "jsqr": "^1.4.0",
+          "jszip": "3.10.1",
+          "mirror-drive": "^1.14.1",
+          "pear-aliases": "1.0.6",
+          "pear-bridge": "1.2.4",
+          "pear-electron": "1.7.25-rc.0",
+          "pear-ipc": "6.4.0",
+          "pear-run": "1.0.5",
+          "pear-runtime": "^1.1.1",
+          "pear-runtime-legacy-storage": "^1.1.0",
+          "react": "19.1.0",
+          "react-dom": "19.1.0",
+          "styled-components": "6.1.19"
+        },
+        "devDependencies": {
+          "@babel/core": "7.26.10",
+          "@babel/preset-env": "7.26.9",
+          "@babel/preset-react": "7.26.3",
+          "@babel/preset-typescript": "^7.28.5",
+          "@electron-forge/cli": "^7.6.0",
+          "@electron-forge/maker-msix": "^7.6.0",
+          "@electron/notarize": "^2.2.1",
+          "@lingui/cli": "5.1.2",
+          "@testing-library/dom": "^10.4.1",
+          "@testing-library/jest-dom": "6.6.3",
+          "@testing-library/react": "16.2.0",
+          "@tetherto/tether-dev-docs": "github:tetherto/tether-dev-docs",
+          "@types/node": "^25.4.0",
+          "@types/react": "19.2.7",
+          "@types/react-dom": "19.2.3",
+          "@vercel/ncc": "0.38.3",
+          "babel-jest": "29.7.0",
+          "bare-pack": "1.4.8",
+          "cmake-pear": "2.0.0",
+          "concurrently": "9.2.1",
+          "cross-env": "^10.1.0",
+          "electron": "^33.0.0",
+          "electron-builder": "^26.8.1",
+          "electron-forge-plugin-prune-prebuilds": "^1.0.0",
+          "electron-forge-plugin-universal-prebuilds": "^1.0.0",
+          "electron-reload": "^2.0.0-alpha.1",
+          "esbuild": "^0.24.2",
+          "husky": "9.1.7",
+          "jest": "29.7.0",
+          "jest-environment-jsdom": "29.7.0",
+          "knip": "^6.14.1",
+          "nodemon": "^3.0.0",
+          "patch-package": "^8.0.1",
+          "pear-build": "^1.1.0",
+          "pear-interface": "1.0.0",
+          "pear-runtime-updater": "^3.0.10",
+          "typescript": "^5.9.3",
+          "wait-on": "^8.0.0",
+          "which-runtime": "^1.3.2"
+        },
+        "optionalDependencies": {
+          "@esbuild/win32-x64": "0.24.2"
+        },
+        "peerDependencies": {},
+        "overrides": {
+          "@xmldom/xmldom": "^0.8.10",
+          "react": "19.1.0",
+          "react-dom": "19.1.0",
+          "electron-windows-msix": "git+https://github.com/chetasr/electron-windows-msix.git"
+        }
+      },
+      "github_dependencies": [
+        {
+          "package_path": "node_modules/@electron/node-gyp",
+          "version": "10.2.0-electron.1",
+          "resolved": "git+ssh://git@github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-lib-feedback",
+          "version": "0.0.7",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-lib-feedback.git#6c5df8c71efb303ea980214789147ccf7528a06c"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-lib-ui-react-hooks",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-lib-ui-react-hooks.git#e80d01ebdb02f7011e2f28a52a01447dcec0c645"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-avatar-initials",
+          "version": "0.0.7",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-avatar-initials.git#3aeaa8a0fe9843e33ffcc60eb60f9e792f4549ef"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-date",
+          "version": "0.0.8",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-date.git#725df1bf2b2f997d16f8400565bf8743d03ec127"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-generate-unique-id",
+          "version": "0.0.6",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-generate-unique-id.git#9525e967094b84ed925ad1744ad33cb5ffb5c4b3"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-pattern-search",
+          "version": "0.0.5",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-pattern-search.git#57d12e880be81e794bb1332a7870ce50c7b164f2"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-qr",
+          "version": "0.0.5",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-qr.git#c5e3955e024b46a07f8281bfd77d13b242c8a7b1"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-validator",
+          "version": "0.0.10",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-validator.git#7e3517f5f7ae31d8dee33ea5b191adcb3e47fe45"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-constants",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-constants.git#7fecf45fbe21de6addea1eaefb7867ac05cb8410"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-data-export",
+          "version": "0.0.13",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-data-export.git#bd05b345a4372b17ba3aaa899e3bcad911745178"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-data-import",
+          "version": "0.0.14",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-data-import.git#6e1c91448fcf0dde63e4e49b5eea2914a8985213"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-native-messaging-bridge",
+          "version": "0.0.2",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-native-messaging-bridge.git#3ef96364e6749608aae538ccc41ac5e66d832e21"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-ui-kit",
+          "version": "0.0.40",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-ui-react-native-components.git#43e610d1b3a3c91168b02c8a0a5e8c4269d3e42d"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-vault",
+          "version": "0.1.0",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-vault.git#f9ef75ef74b459d07b296558720f3b45b70309ce"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-vault-core",
+          "version": "0.2.0",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-vault-core.git#a2f686326cd41b14782be78168a04dfaa31beaa6"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-utils-password-check",
+          "version": "0.0.14",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-utils-password-check.git#8af54c1f1dabf8be6fe2c1bf891d1d68c7c4a0e4"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-utils-password-generator",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-utils-password-generator.git#9045d47f7e40f50639cdb41b5666ef1c9f895f5b"
+        },
+        {
+          "package_path": "node_modules/@tetherto/tether-dev-docs",
+          "version": "0.0.8",
+          "resolved": "git+ssh://git@github.com/tetherto/tether-dev-docs.git#64c264c34e8255360ca6c805457119168c789583"
+        },
+        {
+          "package_path": "node_modules/electron-windows-msix",
+          "version": "2.0.4",
+          "resolved": "git+ssh://git@github.com/chetasr/electron-windows-msix.git#b53dcd40a570937a362e19e25c2bf39d5889c003"
+        }
+      ],
+      "upstream_scripts": {
+        "test": "jest",
+        "build:app": "lingui extract && lingui compile && tsc",
+        "lint:fix": "eslint --fix ./src",
+        "lint": "eslint ./src",
+        "build:worklet": "node scripts/build.worklet.mjs",
+        "build": "node scripts/build.worklet.mjs && npm run build:app && node scripts/bundle-renderer.mjs && node scripts/bundle-bridge.mjs",
+        "build:prod": "cross-env NODE_ENV=production npm run build",
+        "bundle:renderer": "node scripts/bundle-renderer.mjs",
+        "bundle:bridge": "node scripts/bundle-bridge.mjs",
+        "lingui:extract": "lingui extract",
+        "lingui:compile": "lingui compile",
+        "prepare": "husky",
+        "postinstall": "node scripts/patch-electron-dock-name.mjs",
+        "watch:packages": "nodemon --watch packages --ext js,json --exec \"echo 'Packages changed'\"",
+        "electron": "electron .",
+        "dev": "concurrently -n \"TypeScript,Bundle,Bridge,Electron\" -c \"blue,cyan,magenta,green\" \"node node_modules/typescript/bin/tsc --watch\" \"node scripts/bundle-renderer.mjs --watch\" \"node scripts/bundle-bridge.mjs --watch\" \"wait-on dist/renderer.bundle.js && electron .\"",
+        "dev:reset": "PEARPASS_DEV_RESET=1 npm run dev",
+        "dist:prepare:dev": "npm install && npm run build && npm prune --omit=dev && npm install electron --no-save",
+        "dist:mac:arm64": "npx electron-builder --mac --arm64 -c electron-builder.mac.json --publish never",
+        "dist:mac:x64": "npx electron-builder --mac --x64 -c electron-builder.mac.json --publish never",
+        "dist:mac:arm64:dev": "SKIP_NOTARIZE=true CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist:mac:arm64",
+        "dist:mac:x64:dev": "SKIP_NOTARIZE=true CSC_IDENTITY_AUTO_DISCOVERY=false npm run dist:mac:x64",
+        "dist:win:x64": "electron-forge make --platform=win32 --arch=x64",
+        "dist:win:arm64": "electron-forge make --platform=win32 --arch=arm64",
+        "dist:linux:x64": "npx electron-builder --linux --x64 -c electron-builder.linux.json --publish never",
+        "dist:linux:arm64": "npx electron-builder --linux --arm64 -c electron-builder.linux.json --publish never",
+        "make": "npm run build:prod && npm run dist:win:x64 && npm run dist:win:arm64",
+        "dist:snap:x64": "npx electron-builder --linux snap --x64 --publish never",
+        "dist:snap:arm64": "npx electron-builder --linux snap --arm64 --publish never",
+        "dist:snap:x64:dev": "npm run dist:prepare:dev && dist:snap:x64 && npm install",
+        "dist:snap:arm64:dev": "npm run dist:prepare:dev && dist:snap:arm64 && npm install",
+        "pear:build:darwin:arm64": "npx pear-build --package=./package.json --darwin-arm64-app ./out/mac-arm64/PearPass.app --target ../pearpass-app-desktop-$npm_package_version",
+        "pear:build:darwin:x64": "npx pear-build --package=./package.json --darwin-x64-app ./out/mac/PearPass.app --target ../pearpass-app-desktop-$npm_package_version",
+        "pear:build:linux:x64": "npx pear-build --package=./package.json --linux-x64-app ./out/PearPass.AppImage --target ../pearpass-app-desktop-$npm_package_version",
+        "pear:build:linux:arm64": "npx pear-build --package=./package.json --linux-arm64-app ./out/PearPass.AppImage --target ../pearpass-app-desktop-$npm_package_version",
+        "pear:build:win:x64": "npx pear-build --package=./package.json --win32-x64-app ./out/PearPass/PearPass.msix --target ../pearpass-app-desktop-%npm_package_version%",
+        "pear:build:win:arm64": "npx pear-build --package=./package.json --win32-arm64-app ./out/PearPass/PearPass.msix --target ../pearpass-app-desktop-%npm_package_version%",
+        "knip": "knip"
+      }
+    },
+    {
+      "name": "pearpass-app-mobile",
+      "upstream": "tetherto/pearpass-app-mobile",
+      "fork": "tksuns12/pearpass-app-mobile",
+      "commit": "c6afff8b88e3b28f737c3fc91178a1d187f2fb43",
+      "node_baseline": "22.12.0",
+      "package_sha256": "1ab7e026f5a8fe6438fa20a797b346c57c197046edefd4d0502e1457502ac609",
+      "lockfile_sha256": "47f38b6b15b006cb69a6d48df1c9f8011e92afa26a1db1c7b7b28d061c11a750",
+      "dependency_declarations": {
+        "dependencies": {
+          "@expo/metro-runtime": "~5.0.4",
+          "@gorhom/bottom-sheet": "5.2.9",
+          "@lingui/core": "5.3.3",
+          "@lingui/macro": "5.3.3",
+          "@lingui/react": "5.3.3",
+          "@react-native-async-storage/async-storage": "2.2.0",
+          "@react-native-community/datetimepicker": "^9.1.0",
+          "@react-native-community/netinfo": "^12.0.1",
+          "@react-native-community/slider": "5.1.1",
+          "@react-navigation/bottom-tabs": "7.2.0",
+          "@react-navigation/drawer": "7.1.1",
+          "@react-navigation/native": "7.0.14",
+          "@react-navigation/native-stack": "7.2.0",
+          "@sentry/react-native": "8.9.2",
+          "@tetherto/pear-apps-lib-feedback": "git+https://github.com/tetherto/pear-apps-lib-feedback.git",
+          "@tetherto/pear-apps-lib-ui-react-hooks": "git+https://github.com/tetherto/pear-apps-lib-ui-react-hooks.git",
+          "@tetherto/pear-apps-utils-avatar-initials": "git+https://github.com/tetherto/pear-apps-utils-avatar-initials.git",
+          "@tetherto/pear-apps-utils-date": "git+https://github.com/tetherto/pear-apps-utils-date.git",
+          "@tetherto/pear-apps-utils-generate-unique-id": "git+https://github.com/tetherto/pear-apps-utils-generate-unique-id.git",
+          "@tetherto/pear-apps-utils-pattern-search": "git+https://github.com/tetherto/pear-apps-utils-pattern-search.git",
+          "@tetherto/pear-apps-utils-qr": "git+https://github.com/tetherto/pear-apps-utils-qr.git",
+          "@tetherto/pear-apps-utils-validator": "git+https://github.com/tetherto/pear-apps-utils-validator.git",
+          "@tetherto/pearpass-lib-constants": "git+https://github.com/tetherto/pearpass-lib-constants.git",
+          "@tetherto/pearpass-lib-data-export": "git+https://github.com/tetherto/pearpass-lib-data-export.git",
+          "@tetherto/pearpass-lib-data-import": "git+https://github.com/tetherto/pearpass-lib-data-import.git",
+          "@tetherto/pearpass-lib-ui-kit": "git+https://github.com/tetherto/pearpass-lib-ui-react-native-components.git#design-system-v2",
+          "@tetherto/pearpass-lib-vault": "git+https://github.com/tetherto/pearpass-lib-vault.git",
+          "@tetherto/pearpass-lib-vault-core": "git+https://github.com/tetherto/pearpass-lib-vault-core.git",
+          "@tetherto/pearpass-utils-password-check": "git+https://github.com/tetherto/pearpass-utils-password-check.git",
+          "@tetherto/pearpass-utils-password-generator": "git+https://github.com/tetherto/pearpass-utils-password-generator.git",
+          "bare-pack": "1.4.1",
+          "buffer": "6.0.3",
+          "expo": "~53.0.17",
+          "expo-asset": "~11.1.7",
+          "expo-av": "~15.1.7",
+          "expo-blur": "~14.1.5",
+          "expo-build-properties": "~0.14.8",
+          "expo-clipboard": "~7.1.5",
+          "expo-crypto": "~13.0.0",
+          "expo-document-picker": "~13.1.6",
+          "expo-file-system": "~18.1.11",
+          "expo-font": "~13.3.2",
+          "expo-haptics": "~14.1.4",
+          "expo-image-picker": "~16.1.4",
+          "expo-linking": "~7.1.7",
+          "expo-local-authentication": "~16.0.5",
+          "expo-navigation-bar": "~4.2.8",
+          "expo-secure-store": "~14.2.3",
+          "expo-sharing": "~13.1.5",
+          "expo-status-bar": "~2.2.3",
+          "expo-transparent-video": "^0.3.4",
+          "expo-video": "~2.2.2",
+          "jszip": "3.10.1",
+          "react": "19.0.0",
+          "react-dom": "19.0.0",
+          "react-native": "0.79.5",
+          "react-native-bare-kit": "0.13.0",
+          "react-native-config": "1.5.6",
+          "react-native-gesture-handler": "~2.24.0",
+          "react-native-markdown-display": "7.0.2",
+          "react-native-qrcode-svg": "6.3.15",
+          "react-native-reanimated": "~3.17.4",
+          "react-native-safe-area-context": "5.4.0",
+          "react-native-screens": "~4.11.1",
+          "react-native-svg": "15.11.2",
+          "react-native-svg-transformer": "1.5.1",
+          "react-native-toast-message": "2.3.3",
+          "react-native-vector-icons": "10.2.0",
+          "react-native-vision-camera": "^4.7.3",
+          "react-native-worklets-core": "^1.6.3",
+          "react-strict-dom": "^0.0.55",
+          "rive-react-native": "9.3.4",
+          "sodium-native": "5.0.9",
+          "vision-camera-zxing": "^0.1.1"
+        },
+        "devDependencies": {
+          "@babel/core": "7.28.0",
+          "@babel/preset-env": "7.28.0",
+          "@lingui/babel-plugin-lingui-macro": "5.3.3",
+          "@lingui/cli": "5.3.3",
+          "@lingui/format-json": "5.3.3",
+          "@react-native-community/cli": "latest",
+          "@react-native/babel-preset": "0.79.5",
+          "@testing-library/dom": "^10.4.1",
+          "@testing-library/jest-dom": "^6.9.1",
+          "@testing-library/react": "^16.3.0",
+          "@testing-library/react-native": "13.2.0",
+          "@tetherto/tether-dev-docs": "github:tetherto/tether-dev-docs",
+          "@types/jest": "^30.0.0",
+          "@types/node": "^25.9.1",
+          "@types/react": "^19.2.4",
+          "babel-jest": "29.7.0",
+          "babel-plugin-macros": "3.1.0",
+          "eslint-config-expo": "10.0.0",
+          "eslint-plugin-prettier": "^5.5.5",
+          "husky": "^9.1.7",
+          "jest": "29.7.0",
+          "jest-environment-jsdom": "^30.2.0",
+          "knip": "^6.14.1",
+          "patch-package": "^8.0.1",
+          "react-test-renderer": "19.0.0",
+          "typescript": "~5.8.3"
+        },
+        "optionalDependencies": {},
+        "peerDependencies": {},
+        "overrides": {
+          "react": "$react",
+          "react-dom": "$react-dom"
+        }
+      },
+      "github_dependencies": [
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-lib-feedback",
+          "version": "0.0.7",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-lib-feedback.git#6c5df8c71efb303ea980214789147ccf7528a06c"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-lib-ui-react-hooks",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-lib-ui-react-hooks.git#159c89de213dd9f1703aed87ff542112ba3e195f"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-avatar-initials",
+          "version": "0.0.7",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-avatar-initials.git#3aeaa8a0fe9843e33ffcc60eb60f9e792f4549ef"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-date",
+          "version": "0.0.8",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-date.git#725df1bf2b2f997d16f8400565bf8743d03ec127"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-generate-unique-id",
+          "version": "0.0.6",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-generate-unique-id.git#8c7b89817e34db73f1c07600b270e203e893274a"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-pattern-search",
+          "version": "0.0.5",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-pattern-search.git#57d12e880be81e794bb1332a7870ce50c7b164f2"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-qr",
+          "version": "0.0.5",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-qr.git#c5e3955e024b46a07f8281bfd77d13b242c8a7b1"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pear-apps-utils-validator",
+          "version": "0.0.10",
+          "resolved": "git+ssh://git@github.com/tetherto/pear-apps-utils-validator.git#7e3517f5f7ae31d8dee33ea5b191adcb3e47fe45"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-constants",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-constants.git#63bbf5ddab196de6ff411b0643b102853c3a8ac1"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-data-export",
+          "version": "0.0.13",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-data-export.git#baff7490a4dedefa79121eabc3b3e3da86933ed1"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-data-import",
+          "version": "0.0.14",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-data-import.git#1647d841c56e84e4a20fc59ec9d76305037229cf"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-ui-kit",
+          "version": "0.0.40",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-ui-react-native-components.git#c4bdd87f9ab814c57ab6fe0a65d02408963bd851"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-vault",
+          "version": "0.1.0",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-vault.git#f9ef75ef74b459d07b296558720f3b45b70309ce"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-lib-vault-core",
+          "version": "0.2.0",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-lib-vault-core.git#a2f686326cd41b14782be78168a04dfaa31beaa6"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-utils-password-check",
+          "version": "0.0.14",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-utils-password-check.git#8af54c1f1dabf8be6fe2c1bf891d1d68c7c4a0e4"
+        },
+        {
+          "package_path": "node_modules/@tetherto/pearpass-utils-password-generator",
+          "version": "0.0.11",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-utils-password-generator.git#9045d47f7e40f50639cdb41b5666ef1c9f895f5b"
+        },
+        {
+          "package_path": "node_modules/@tetherto/tether-dev-docs",
+          "version": "0.0.8",
+          "resolved": "git+ssh://git@github.com/tetherto/tether-dev-docs.git#64c264c34e8255360ca6c805457119168c789583"
+        }
+      ],
+      "upstream_scripts": {
+        "start": "expo start --dev-client",
+        "build": "npm run bundle-bare && npm run lingui:extract && npm run lingui:compile",
+        "android": "expo run:android",
+        "android:fdroid": "PEARPASS_DISTRIBUTION=fdroid expo run:android --variant fdroidDebug",
+        "ios": "expo run:ios",
+        "lint:fix": "eslint --fix ./src",
+        "lint": "eslint ./src",
+        "typecheck": "tsc --noEmit",
+        "prepare": "husky",
+        "postinstall": "patch-package && node scripts/build-plugins.cjs && npm run barekit:link-ios-addons",
+        "build-plugins": "node scripts/build-plugins.cjs",
+        "barekit:link-ios-addons": "node node_modules/react-native-bare-kit/ios/link.mjs",
+        "pods:install": "cd ios && pod install",
+        "test": "jest",
+        "bundle:android": "bare-pack -p android --linked --defer sentry-bare --out bundles/app-android.bundle.js node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app.js",
+        "bundle:ios": "bare-pack -p ios --linked --defer sentry-bare --out bundles/app-ios.bundle.js node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app.js",
+        "bundle:autofill": "bare-pack --target ios --target android --linked --defer sentry-bare --out bundles/autofill.bundle node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app-ipc.js",
+        "bundle-bare": "npm run bundle:android && npm run bundle:ios && npm run bundle:autofill",
+        "bundle:android:dev": "npm run bundle:android -- --defer @tetherto/swarmconf",
+        "bundle:ios:dev": "npm run bundle:ios -- --defer @tetherto/swarmconf",
+        "bundle:autofill:dev": "npm run bundle:autofill -- --defer @tetherto/swarmconf",
+        "bundle-bare:dev": "npm run bundle:android:dev && npm run bundle:ios:dev && npm run bundle:autofill:dev",
+        "bundle:android:nightly": "bare-pack -p android --linked --out bundles/app-android.bundle.js node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app.js",
+        "bundle:ios:nightly": "bare-pack -p ios --linked --out bundles/app-ios.bundle.js node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app.js",
+        "bundle:autofill:nightly": "bare-pack --target ios --target android --linked --out bundles/autofill.bundle node_modules/@tetherto/pearpass-lib-vault-core/src/worklet/app-ipc.js",
+        "bundle-bare:nightly": "npm run bundle:android:nightly && npm run bundle:ios:nightly && npm run bundle:autofill:nightly",
+        "lingui:extract": "lingui extract",
+        "lingui:compile": "lingui compile",
+        "fdroid:patches": "node scripts/fdroid/apply-patches.mjs all",
+        "fdroid:patches:prebuild": "node scripts/fdroid/apply-patches.mjs prebuild",
+        "fdroid:patches:build": "node scripts/fdroid/apply-patches.mjs build",
+        "eas-build-pre-install": "node -v && npm -v && npm install --package-lock-only --ignore-scripts --no-audit --no-fund",
+        "eas-build-post-install": "npx patch-package && npm run build-plugins && npm run barekit:link-ios-addons && npm run bundle-bare && npm run lingui:extract && npm run lingui:compile",
+        "knip": "knip"
+      }
+    },
+    {
+      "name": "pearpass-lib-vault-core",
+      "upstream": "tetherto/pearpass-lib-vault-core",
+      "fork": "tksuns12/pearpass-lib-vault-core",
+      "commit": "7c833475a7335a0a7b1d340c474433af8be23289",
+      "node_baseline": "22.12.0",
+      "package_sha256": "2af52f9c283a4c863a799871bcdb4fd64574f54adbec8a5bc17860e7858e009f",
+      "lockfile_sha256": "149e28221c4879aa5f37866df7f74419abfebebd7765de9c4c5cc16b858a3c8d",
+      "dependency_declarations": {
+        "dependencies": {
+          "@noble/ciphers": "^2.2.0",
+          "@noble/hashes": "^2.0.1",
+          "@tetherto/pearpass-utils-password-check": "git+https://github.com/tetherto/pearpass-utils-password-check",
+          "autopass": "~3.3.0",
+          "b4a": "^1.7.3",
+          "bare-buffer": "^3.4.2",
+          "bare-crypto": "^1.13.0",
+          "bare-fetch": "^2.5.1",
+          "bare-file-logger": "^1.2.1",
+          "bare-fs": "^4.7.1",
+          "bare-os": "^3.6.2",
+          "bare-path": "^3.0.0",
+          "bare-rpc": "^1.1.0",
+          "bare-system-logger": "^1.0.3",
+          "blind-encryption-sodium": "^3.0.0",
+          "buffer": "^6.0.3",
+          "compact-encoding": "^2.18.0",
+          "corestore": "^7.7.0",
+          "events": "^3.3.0",
+          "framed-stream": "^1.0.1",
+          "hypercore-id-encoding": "^1.3.0",
+          "hyperdht": "^6.28.0",
+          "hyperswarm": "^4.16.0",
+          "otpauth": "^9.5.0",
+          "rocksdb-native": "^3.11.4",
+          "sodium-native": "^5.0.10",
+          "suspendify": "^1.7.1",
+          "udx-native": "^1.19.2"
+        },
+        "devDependencies": {
+          "@babel/core": "^7.28.4",
+          "@babel/preset-env": "^7.28.3",
+          "@tetherto/tether-dev-docs": "git+https://github.com/tetherto/tether-dev-docs",
+          "babel-jest": "30.2.0",
+          "eslint": "^9.39.3",
+          "eslint-config-prettier": "9.1.0",
+          "eslint-plugin-eslint-plugin": "6.4.0",
+          "eslint-plugin-import": "2.31.0",
+          "eslint-plugin-prettier": "5.2.1",
+          "eslint-plugin-react": "7.37.4",
+          "globals": "15.14.0",
+          "husky": "^9.1.7",
+          "jest": "30.2.0",
+          "prettier": "3.4.2"
+        },
+        "optionalDependencies": {
+          "@tetherto/swarmconf": "^1.0.0"
+        },
+        "peerDependencies": {
+          "sentry-bare": "^0.2.0"
+        },
+        "overrides": {}
+      },
+      "github_dependencies": [
+        {
+          "package_path": "node_modules/@tetherto/pearpass-utils-password-check",
+          "version": "0.0.14",
+          "resolved": "git+ssh://git@github.com/tetherto/pearpass-utils-password-check.git#611199489394bef788804b7fca65e61712cd0b44"
+        },
+        {
+          "package_path": "node_modules/@tetherto/swarmconf",
+          "version": "1.0.0",
+          "resolved": "https://npm.pkg.github.com/download/@tetherto/swarmconf/1.0.0/baef523fa4bac7a16fc36ae75578c077d17584fc"
+        },
+        {
+          "package_path": "node_modules/@tetherto/tether-dev-docs",
+          "version": "0.0.8",
+          "resolved": "git+ssh://git@github.com/tetherto/tether-dev-docs.git#c9faaf1afe7ccdd7638cfb74aecbb3dc8c4a00af"
+        }
+      ],
+      "upstream_scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "test": "jest",
+        "prepare": "husky || true"
+      }
+    }
+  ],
+  "integration_gates": {
+    "five_platform_build": "NOT_RUN",
+    "a_to_b_to_c_replication": "NOT_RUN",
+    "concurrent_secret_conflicts": "NOT_RUN",
+    "revocation_and_key_rotation": "NOT_RUN",
+    "cold_lan_pairing_without_external_services": "NOT_RUN",
+    "crash_recovery_and_backup_restore": "NOT_RUN",
+    "mobile_background_sync": "NOT_RUN"
+  }
+}
