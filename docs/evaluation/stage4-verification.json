@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "REVIEW_PATCH_ONLY_NOT_APP_INTEGRATED",
+  "base_commit": "87ad7c4c5cc3adc0ec6013fd4b08a246201abdfe",
+  "baseline_policy_git_blob": "5a0863b33cc5b6e710dcb4c8ed6df65164ca84ad",
+  "delivery": {
+    "remote_write": "blocked by tool security review; not retried",
+    "remote_code_applied": false,
+    "github_committed": false,
+    "github_pushed": false,
+    "method": "standalone sandbox artifact"
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "platform": "linux",
+    "architecture": "x64",
+    "openssl": "3.0.16",
+    "sqlite": "3.49.1"
+  },
+  "tests": {
+    "unique_tests": 47,
+    "envelope": 22,
+    "journal": 18,
+    "real_process_kill": 7,
+    "runs": [
+      {
+        "run": 1,
+        "exit_code": 0,
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
+        "skipped": 0,
+        "seconds": 1.494
+      },
+      {
+        "run": 2,
+        "exit_code": 0,
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
+        "skipped": 0,
+        "seconds": 1.213
+      },
+      {
+        "run": 3,
+        "exit_code": 0,
+        "tests": 47,
+        "pass": 47,
+        "fail": 0,
+        "skipped": 0,
+        "seconds": 1.348
+      }
+    ],
+    "prior_726_app_tests_rerun": false
+  },
+  "cryptography": {
+    "provider": "Node/OpenSSL",
+    "envelope": "X25519 + HKDF-SHA256 + AES-256-GCM + Ed25519; experimental composition, not HPKE",
+    "registration": "pinned signing key AND pinned signed box-key document; initial approval is fixture only",
+    "production_audit": false
+  },
+  "journal": {
+    "implementation": "node:sqlite (experimental Node 22 API)",
+    "observed_journal_mode": "wal",
+    "observed_synchronous": 2,
+    "prepared_state_survives_restart": true,
+    "stale_epoch_queue_writes_rejected": true,
+    "old_outbox_retained_as_quarantined": true,
+    "plaintext_keys_and_values_scanned_in_test_db_and_wal": true,
+    "materializer": "trusted callback contract; tests use explicit stub, not Autopass migration"
+  },
+  "fault_boundaries": [
+    "prepare:before-commit",
+    "prepare:after-commit",
+    "materialize:before-return",
+    "activate:before-commit",
+    "activate:after-commit",
+    "enqueue:before-commit",
+    "enqueue:after-commit"
+  ],
+  "syntax_checked": [
+    "scripts/evaluation/policy/signed-policy.mjs",
+    "scripts/evaluation/cutover/test-fixture.mjs",
+    "scripts/evaluation/cutover/crash-worker.mjs",
+    "scripts/evaluation/cutover/epoch-journal.test.mjs",
+    "scripts/evaluation/cutover/epoch-journal.mjs",
+    "scripts/evaluation/cutover/key-envelope.mjs",
+    "scripts/evaluation/cutover/key-envelope.test.mjs",
+    "scripts/evaluation/cutover/crash-recovery.test.mjs"
+  ],
+  "npm_install_executed": false,
+  "network_used_by_tests": false,
+  "not_tested": [
+    "macOS execution of new code",
+    "Windows/Android/iOS",
+    "physical power loss",
+    "whole-disk rollback",
+    "real QR or transport",
+    "OS key storage",
+    "Autopass checkpoint migration",
+    "app write/read/autofill integration",
+    "dispatch and inflight message fencing",
+    "complete app build/Jest suite",
+    "independent security review"
+  ],
+  "production_release_allowed": false,
+  "source_sha256": {
+    "scripts/evaluation/cutover/crash-recovery.test.mjs": "64ce2caee838526d39d78d7a45e058e73d08ce6e0c88937c2e2dd373fe91235f",
+    "scripts/evaluation/cutover/crash-worker.mjs": "5383acfd162b44d02707255f3a1118567ebc2de80b4233cf43da783308872c43",
+    "scripts/evaluation/cutover/epoch-journal.mjs": "7427637f0cc58e8d00e48662dacc1ea83a80cca4944a2b1a2d39a1581bb075b4",
+    "scripts/evaluation/cutover/epoch-journal.test.mjs": "7ffa5a132ae402a5f6c20df4463236f7de698b4e78a9db022894d6fbccc452f8",
+    "scripts/evaluation/cutover/key-envelope.mjs": "84715d07622add0bdc7ef44a8414ce549663550ba2ddc27877b2c77e1c2efb96",
+    "scripts/evaluation/cutover/key-envelope.test.mjs": "cd7db3c75d96bc12cdf470b7256694a1b690ecf8f48c46c294a270b0c878007a",
+    "scripts/evaluation/cutover/test-fixture.mjs": "0557708072f965d3c8e823570a58aeaa24b2baa3a851b5b9451a5bb991894699",
+    "scripts/evaluation/policy/signed-policy.mjs": "1b5859b90517ab266d6ffbf0f48d95d2068ed6d12377dd691bb5e287a1ed1ec4"
+  },
+  "patch_verification": {
+    "new_files": 10,
+    "git_apply_check": "PASS in separate baseline-only local copy",
+    "applied_patch_tests": {
+      "passed": 47,
+      "failed": 0,
+      "exit_code": 0
+    },
+    "remote_application": false
+  }
+}

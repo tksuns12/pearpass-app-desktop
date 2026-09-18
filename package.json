@@ -136,7 +136,8 @@
     "eval:policy": "node scripts/evaluation/engine-policy-probe.mjs",
     "eval:prepare-ui": "python3 scripts/evaluation/prepare-ui.py",
     "eval:policy-model": "node --test scripts/evaluation/policy/signed-policy.test.mjs scripts/evaluation/policy/automatic-value.test.mjs",
-    "eval:policy-integration": "node --test scripts/evaluation/policy/engine-policy.integration.test.mjs"
+    "eval:policy-integration": "node --test scripts/evaluation/policy/engine-policy.integration.test.mjs",
+    "eval:cutover": "node --test scripts/evaluation/cutover/*.test.mjs"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",

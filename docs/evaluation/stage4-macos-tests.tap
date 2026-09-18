@@ -1,0 +1,303 @@
+TAP version 13
+# (node:35114) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: SIGKILL recovery at prepare:before-commit
+ok 1 - SIGKILL recovery at prepare:before-commit
+  ---
+  duration_ms: 251.549292
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at prepare:after-commit
+ok 2 - SIGKILL recovery at prepare:after-commit
+  ---
+  duration_ms: 197.549792
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at materialize:before-return
+ok 3 - SIGKILL recovery at materialize:before-return
+  ---
+  duration_ms: 235.725583
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at activate:before-commit
+ok 4 - SIGKILL recovery at activate:before-commit
+  ---
+  duration_ms: 222.654167
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at activate:after-commit
+ok 5 - SIGKILL recovery at activate:after-commit
+  ---
+  duration_ms: 211.144
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at enqueue:before-commit
+ok 6 - SIGKILL recovery at enqueue:before-commit
+  ---
+  duration_ms: 231.492792
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# Subtest: SIGKILL recovery at enqueue:after-commit
+ok 7 - SIGKILL recovery at enqueue:after-commit
+  ---
+  duration_ms: 210.637
+  type: 'test'
+  ...
+# Reached named boundary; worker died by SIGKILL; reopened SQLite and checked epoch fence.
+# (node:35115) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: prepare persists and denies both old and new writes until activation
+ok 8 - prepare persists and denies both old and new writes until activation
+  ---
+  duration_ms: 137.857291
+  type: 'test'
+  ...
+# Subtest: activation persists; old generation stays retired after reopen
+ok 9 - activation persists; old generation stays retired after reopen
+  ---
+  duration_ms: 103.529833
+  type: 'test'
+  ...
+# Subtest: repeat prepare and resume are idempotent without another generation
+ok 10 - repeat prepare and resume are idempotent without another generation
+  ---
+  duration_ms: 78.245833
+  type: 'test'
+  ...
+# Subtest: materializer failure leaves durable prepared state, never returns to old writes
+ok 11 - materializer failure leaves durable prepared state, never returns to old writes
+  ---
+  duration_ms: 99.286209
+  type: 'test'
+  ...
+# Subtest: mismatched storage receipt cannot activate
+ok 12 - mismatched storage receipt cannot activate
+  ---
+  duration_ms: 76.448041
+  type: 'test'
+  ...
+# Subtest: a missing checkpoint is rejected even for correct target storage
+ok 13 - a missing checkpoint is rejected even for correct target storage
+  ---
+  duration_ms: 74.61875
+  type: 'test'
+  ...
+# Subtest: unwrapping key is wiped after materializer success and failure
+ok 14 - unwrapping key is wiped after materializer success and failure
+  ---
+  duration_ms: 71.720709
+  type: 'test'
+  ...
+# Subtest: concurrent connections cannot use a cached old epoch or branch a pending transition
+ok 15 - concurrent connections cannot use a cached old epoch or branch a pending transition
+  ---
+  duration_ms: 104.465375
+  type: 'test'
+  ...
+# Subtest: two materializers race without reverting or activating different epochs
+ok 16 - two materializers race without reverting or activating different epochs
+  ---
+  duration_ms: 75.032292
+  type: 'test'
+  ...
+# Subtest: stale signed epoch cannot roll the active state backward
+ok 17 - stale signed epoch cannot roll the active state backward
+  ---
+  duration_ms: 74.366458
+  type: 'test'
+  ...
+# Subtest: tampered envelope does not freeze a healthy current epoch
+ok 18 - tampered envelope does not freeze a healthy current epoch
+  ---
+  duration_ms: 62.839709
+  type: 'test'
+  ...
+# Subtest: journal on disk contains neither raw key nor queued plaintext
+ok 19 - journal on disk contains neither raw key nor queued plaintext
+  ---
+  duration_ms: 65.6365
+  type: 'test'
+  ...
+# Subtest: cross-device opening is rejected by the persistent binding
+ok 20 - cross-device opening is rejected by the persistent binding
+  ---
+  duration_ms: 44.015958
+  type: 'test'
+  ...
+# Subtest: missing DB never silently reinitializes an existing profile
+ok 21 - missing DB never silently reinitializes an existing profile
+  ---
+  duration_ms: 51.216083
+  type: 'test'
+  ...
+# Subtest: existing directory cannot be adopted with create=true
+ok 22 - existing directory cannot be adopted with create=true
+  ---
+  duration_ms: 66.953042
+  type: 'test'
+  ...
+# Subtest: directory and database symlinks fail closed
+ok 23 - directory and database symlinks fail closed
+  ---
+  duration_ms: 53.931834
+  type: 'test'
+  ...
+# Subtest: world-readable existing database rejected
+ok 24 - world-readable existing database rejected
+  ---
+  duration_ms: 40.806208
+  type: 'test'
+  ...
+# Subtest: damaged persisted signed state does not recover to genesis
+ok 25 - damaged persisted signed state does not recover to genesis
+  ---
+  duration_ms: 44.455084
+  type: 'test'
+  ...
+# Subtest: approved recipient unwraps fresh epoch key
+ok 26 - approved recipient unwraps fresh epoch key
+  ---
+  duration_ms: 28.916542
+  type: 'test'
+  ...
+# Subtest: same key produces distinct independently decryptable envelopes
+ok 27 - same key produces distinct independently decryptable envelopes
+  ---
+  duration_ms: 12.790166
+  type: 'test'
+  ...
+# Subtest: nonrecipient cannot open the same unmodified ciphertext
+ok 28 - nonrecipient cannot open the same unmodified ciphertext
+  ---
+  duration_ms: 8.988583
+  type: 'test'
+  ...
+# Subtest: revoked device receives no next-generation envelope
+ok 29 - revoked device receives no next-generation envelope
+  ---
+  duration_ms: 7.035375
+  type: 'test'
+  ...
+# Subtest: sender refuses a key that disagrees with the signed commitment
+ok 30 - sender refuses a key that disagrees with the signed commitment
+  ---
+  duration_ms: 7.242583
+  type: 'test'
+  ...
+# Subtest: unapproved replacement box key cannot substitute for a registered document
+ok 31 - unapproved replacement box key cannot substitute for a registered document
+  ---
+  duration_ms: 6.666542
+  type: 'test'
+  ...
+# Subtest: an outsider cannot impersonate an approved device signer
+ok 32 - an outsider cannot impersonate an approved device signer
+  ---
+  duration_ms: 6.495542
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: epoch
+ok 33 - unsigned modification rejected: epoch
+  ---
+  duration_ms: 6.724584
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: recipient
+ok 34 - unsigned modification rejected: recipient
+  ---
+  duration_ms: 8.252541
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: deviceDocument
+ok 35 - unsigned modification rejected: deviceDocument
+  ---
+  duration_ms: 6.793375
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: nonce
+ok 36 - unsigned modification rejected: nonce
+  ---
+  duration_ms: 6.611666
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: ciphertext
+ok 37 - unsigned modification rejected: ciphertext
+  ---
+  duration_ms: 5.738
+  type: 'test'
+  ...
+# Subtest: unsigned modification rejected: tag
+ok 38 - unsigned modification rejected: tag
+  ---
+  duration_ms: 6.31275
+  type: 'test'
+  ...
+# Subtest: wrong administrator signature rejected even with recomputed envelope ID
+ok 39 - wrong administrator signature rejected even with recomputed envelope ID
+  ---
+  duration_ms: 6.24525
+  type: 'test'
+  ...
+# Subtest: valid sender signature does not bypass AEAD integrity
+ok 40 - valid sender signature does not bypass AEAD integrity
+  ---
+  duration_ms: 8.667083
+  type: 'test'
+  ...
+# Subtest: epoch replay fails when presented with a different expected epoch
+ok 41 - epoch replay fails when presented with a different expected epoch
+  ---
+  duration_ms: 6.717125
+  type: 'test'
+  ...
+# Subtest: strict input validation: extra field
+ok 42 - strict input validation: extra field
+  ---
+  duration_ms: 6.029333
+  type: 'test'
+  ...
+# Subtest: strict input validation: version downgrade
+ok 43 - strict input validation: version downgrade
+  ---
+  duration_ms: 6.52525
+  type: 'test'
+  ...
+# Subtest: strict input validation: oversized ciphertext
+ok 44 - strict input validation: oversized ciphertext
+  ---
+  duration_ms: 5.956416
+  type: 'test'
+  ...
+# Subtest: strict input validation: noncanonical hex
+ok 45 - strict input validation: noncanonical hex
+  ---
+  duration_ms: 6.335583
+  type: 'test'
+  ...
+# Subtest: strict input validation: wrong public key type
+ok 46 - strict input validation: wrong public key type
+  ---
+  duration_ms: 6.410959
+  type: 'test'
+  ...
+# Subtest: only public metadata and ciphertext are serialized
+ok 47 - only public metadata and ciphertext are serialized
+  ---
+  duration_ms: 5.471875
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1711.524416

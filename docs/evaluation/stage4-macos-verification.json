@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "APPLIED_ON_MAC_EVALUATION_BRANCH_NOT_APP_INTEGRATED",
+  "base_commit": "87ad7c4c5cc3adc0ec6013fd4b08a246201abdfe",
+  "branch": "evaluation/bootstrap",
+  "patch_sha256": "366df64477a63463fc3db279db22e60b73df9020a9ea90f336d8c0364fbaae5d",
+  "patch_apply_check": "PASS",
+  "reviewed_source_hashes_verified": true,
+  "environment": {
+    "node": "v22.23.2",
+    "platform": "darwin",
+    "arch": "arm64",
+    "openssl": "3.5.7",
+    "sqlite": "3.51.3"
+  },
+  "tests": {
+    "cutover": {
+      "passed": 47,
+      "failed": 0,
+      "skipped": 0,
+      "envelope": 22,
+      "journal": 18,
+      "process_kill": 7
+    },
+    "full_desktop": {
+      "suites_passed": 109,
+      "tests_passed": 726,
+      "snapshots_passed": 13,
+      "failed": 0
+    },
+    "policy_model": {
+      "passed": 27
+    },
+    "policy_engine_integration": {
+      "passed": 2
+    },
+    "bootstrap_guard": {
+      "passed": 21
+    },
+    "engine_chain": {
+      "passed": 1
+    },
+    "baseline_revocation": {
+      "exit_code": 2,
+      "acceptance": "FAIL remains; removeWriter-only is not secrecy revocation"
+    }
+  },
+  "build_exit_code": 0,
+  "lint_exit_code": 0,
+  "lint_notes": "Existing warnings remain; see local validation log",
+  "preflight_exit_code": 0,
+  "registered_script": "npm run eval:cutover",
+  "registered_script_exit_code": 0,
+  "original_lock_unchanged": true,
+  "original_lock_sha256": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08",
+  "runtime_dependencies_changed": false,
+  "main_commit_before_apply": "4378c33479368eb9e46d91c95a779551ffc0e740",
+  "app_launched_this_application": false,
+  "production_data_accessed": false,
+  "release_allowed": false,
+  "non_goals": [
+    "No Autopass checkpoint migration; materializerStub still used",
+    "No UI/autofill/IPC integration of new cutover policy",
+    "No actual QR/LAN/P2P key-envelope delivery",
+    "No OS key store integration",
+    "No physical power-loss or complete-disk rollback proof",
+    "No Windows/Android/iOS validation",
+    "No independent crypto audit; custom evaluation envelope is not HPKE"
+  ],
+  "historical_report": "stage4-verification.json remains the original Linux review-only delivery receipt; this file records subsequent Mac application",
+  "commands": [
+    {
+      "name": "cutover",
+      "command": [
+        "node",
+        "--test",
+        "scripts/evaluation/cutover/crash-recovery.test.mjs",
+        "scripts/evaluation/cutover/epoch-journal.test.mjs",
+        "scripts/evaluation/cutover/key-envelope.test.mjs"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.92,
+      "tests": 47,
+      "pass": 47,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "policy-model",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-model"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 0.75,
+      "tests": 27,
+      "pass": 27,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "policy-integration",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-integration"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 2.24,
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "profile",
+      "command": [
+        "npm",
+        "run",
+        "eval:test"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 0.59,
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "chain",
+      "command": [
+        "npm",
+        "run",
+        "eval:engine"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.95,
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "baseline-gap",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "expectation_met": true,
+      "seconds": 2.02,
+      "acceptance": "FAIL remains; exit 2 reproduces removeWriter-only secrecy gap"
+    },
+    {
+      "name": "full-jest",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--runInBand"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 20.79,
+      "test_suites": "109 passed, 109 total",
+      "tests": "726 passed, 726 total",
+      "snapshots": "13 passed, 13 total"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 13.34
+    },
+    {
+      "name": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 8.48
+    },
+    {
+      "name": "preflight",
+      "command": [
+        "npm",
+        "run",
+        "eval:preflight"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 0.35
+    }
+  ],
+  "source_sha256": {
+    "scripts/evaluation/cutover/crash-recovery.test.mjs": "64ce2caee838526d39d78d7a45e058e73d08ce6e0c88937c2e2dd373fe91235f",
+    "scripts/evaluation/cutover/crash-worker.mjs": "5383acfd162b44d02707255f3a1118567ebc2de80b4233cf43da783308872c43",
+    "scripts/evaluation/cutover/epoch-journal.mjs": "7427637f0cc58e8d00e48662dacc1ea83a80cca4944a2b1a2d39a1581bb075b4",
+    "scripts/evaluation/cutover/epoch-journal.test.mjs": "7ffa5a132ae402a5f6c20df4463236f7de698b4e78a9db022894d6fbccc452f8",
+    "scripts/evaluation/cutover/key-envelope.mjs": "84715d07622add0bdc7ef44a8414ce549663550ba2ddc27877b2c77e1c2efb96",
+    "scripts/evaluation/cutover/key-envelope.test.mjs": "cd7db3c75d96bc12cdf470b7256694a1b690ecf8f48c46c294a270b0c878007a",
+    "scripts/evaluation/cutover/test-fixture.mjs": "0557708072f965d3c8e823570a58aeaa24b2baa3a851b5b9451a5bb991894699",
+    "scripts/evaluation/policy/signed-policy.mjs": "1b5859b90517ab266d6ffbf0f48d95d2068ed6d12377dd691bb5e287a1ed1ec4"
+  }
+}
