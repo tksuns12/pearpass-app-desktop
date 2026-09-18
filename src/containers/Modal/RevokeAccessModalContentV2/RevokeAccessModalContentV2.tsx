@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+// Modified for independent evaluation: no revocation claim without rekey.
+import React from 'react'
 
 import { Button, Dialog, Text, useTheme } from '@tetherto/pearpass-lib-ui-kit'
-import { kickDevice } from '@tetherto/pearpass-lib-vault'
 
 import { createStyles } from './RevokeAccessModalContentV2.styles'
 import { useModal } from '../../../context/ModalContext'
-import { useToast } from '../../../context/ToastContext'
 import { useTranslation } from '../../../hooks/useTranslation'
-import { logger } from '../../../utils/logger'
 
 export type RevokeAccessModalContentV2Props = {
   vaultId: string
@@ -17,8 +15,6 @@ export type RevokeAccessModalContentV2Props = {
 }
 
 export const RevokeAccessModalContentV2 = ({
-  vaultId,
-  targetDeviceId,
   deviceName,
   onClose
 }: RevokeAccessModalContentV2Props) => {
@@ -26,39 +22,11 @@ export const RevokeAccessModalContentV2 = ({
   const { theme } = useTheme()
   const styles = createStyles()
   const { closeModal } = useModal()
-  const { setToast } = useToast()
 
   const handleClose = onClose ?? closeModal
 
-  const [isLoading, setIsLoading] = useState(false)
-
-  const onRevoke = async () => {
-    if (isLoading) return
-    setIsLoading(true)
-    let failures: unknown[] = []
-    try {
-      ;({ failures } = await kickDevice({ vaultId, targetDeviceId }))
-    } catch (error) {
-      logger.error('RevokeAccessModalContentV2', 'kickDevice failed:', error)
-      setToast({
-        message: t("Couldn't revoke access. Please try again.")
-      })
-      setIsLoading(false)
-      return
-    }
-
-    closeModal()
-    setToast({
-      message: failures?.length
-        ? t(
-            "Couldn't reach the device. It will lose access next time it comes online."
-          )
-        : t('"{deviceName}" no longer has access to this vault', {
-            deviceName
-          })
-    })
-  }
-
+  // Keep this action disabled until authenticated key distribution and durable
+  // epoch cutover are integrated. A best-effort wipe is not read revocation.
   return (
     <Dialog
       title={t('Revoke access for {deviceName}?', { deviceName })}
@@ -72,7 +40,6 @@ export const RevokeAccessModalContentV2 = ({
             size="small"
             type="button"
             onClick={handleClose}
-            disabled={isLoading}
             data-testid="revoke-access-cancel-v2"
           >
             {t('Cancel')}
@@ -81,8 +48,7 @@ export const RevokeAccessModalContentV2 = ({
             variant="destructive"
             size="small"
             type="button"
-            isLoading={isLoading}
-            onClick={onRevoke}
+            disabled
             data-testid="revoke-access-submit-v2"
           >
             {t('Revoke Access')}
@@ -97,14 +63,14 @@ export const RevokeAccessModalContentV2 = ({
             variant="caption"
             color={theme.colors.colorTextSecondary}
           >
-            {t('This will disconnect the device from future syncing.')}
+            {t('Secure device removal is unavailable in this evaluation build.')}
           </Text>
           <Text
             as="p"
             variant="caption"
             color={theme.colors.colorTextSecondary}
           >
-            {t('Before you proceed, please note:')}
+            {t('Removing write access alone does not stop a device from reading future changes. This action is disabled until key rotation is integrated.')}
           </Text>
         </div>
         <ul style={styles.bulletList}>
@@ -118,7 +84,7 @@ export const RevokeAccessModalContentV2 = ({
           <li style={styles.bulletItem}>
             <Text as="span" variant="caption">
               {t(
-                'Offline Data: Revoking access prevents future syncing, but it cannot remotely delete data that was already exported.'
+                'Previously copied secrets cannot be recalled. Lost-device recovery also requires changing the passwords or tokens at their source.'
               )}
             </Text>
           </li>

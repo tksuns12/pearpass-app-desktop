@@ -1,0 +1,29 @@
+
+> pearpass-app-desktop@2.2.0 eval:policy-integration
+> node --test scripts/evaluation/policy/engine-policy.integration.test.mjs
+
+TAP version 13
+# Subtest: real engine persists both offline edits and explicit resolution without overwriting history
+ok 1 - real engine persists both offline edits and explicit resolution without overwriting history
+  ---
+  duration_ms: 331.024667
+  type: 'test'
+  ...
+# Both signed versions survived B disk reopen; four revisions retained after resolution.
+# Subtest: fresh epoch key protects an actual replicated writer block against the old key
+ok 2 - fresh epoch key protects an actual replicated writer block against the old key
+  ---
+  duration_ms: 294.26575
+  type: 'test'
+  ...
+# New-key peer read the revision; old-key attempt failed on the same received ciphertext.
+# Fixture provisioning only: no GUI, device key envelopes, migration, durable cutover or LAN tested.
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 941.181709

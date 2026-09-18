@@ -1,0 +1,176 @@
+
+> pearpass-app-desktop@2.2.0 eval:policy-model
+> node --test scripts/evaluation/policy/signed-policy.test.mjs scripts/evaluation/policy/automatic-value.test.mjs
+
+TAP version 13
+# Subtest: automatic use refuses empty
+ok 1 - automatic use refuses empty
+  ---
+  duration_ms: 6.941792
+  type: 'test'
+  ...
+# Subtest: automatic use refuses conflict
+ok 2 - automatic use refuses conflict
+  ---
+  duration_ms: 2.277583
+  type: 'test'
+  ...
+# Subtest: automatic use refuses deleted
+ok 3 - automatic use refuses deleted
+  ---
+  duration_ms: 1.171667
+  type: 'test'
+  ...
+# Subtest: automatic use refuses incomplete
+ok 4 - automatic use refuses incomplete
+  ---
+  duration_ms: 1.109875
+  type: 'test'
+  ...
+# Subtest: automatic use refuses retired
+ok 5 - automatic use refuses retired
+  ---
+  duration_ms: 1.30125
+  type: 'test'
+  ...
+# Subtest: automatic use returns the only ready value
+ok 6 - automatic use returns the only ready value
+  ---
+  duration_ms: 1.699958
+  type: 'test'
+  ...
+# Subtest: signed epoch roundtrip and key commitment
+ok 7 - signed epoch roundtrip and key commitment
+  ---
+  duration_ms: 6.521833
+  type: 'test'
+  ...
+# Subtest: remaining peer accepts next epoch; excluded peer does not
+ok 8 - remaining peer accepts next epoch; excluded peer does not
+  ---
+  duration_ms: 2.461375
+  type: 'test'
+  ...
+# Subtest: rejects old key reuse
+ok 9 - rejects old key reuse
+  ---
+  duration_ms: 2.428875
+  type: 'test'
+  ...
+# Subtest: rejects old storage reuse
+ok 10 - rejects old storage reuse
+  ---
+  duration_ms: 1.378458
+  type: 'test'
+  ...
+# Subtest: rejects skipped generation
+ok 11 - rejects skipped generation
+  ---
+  duration_ms: 1.75325
+  type: 'test'
+  ...
+# Subtest: rejects forked predecessor
+ok 12 - rejects forked predecessor
+  ---
+  duration_ms: 1.539458
+  type: 'test'
+  ...
+# Subtest: rejects cross-vault
+ok 13 - rejects cross-vault
+  ---
+  duration_ms: 1.502041
+  type: 'test'
+  ...
+# Subtest: replayed old epoch cannot replace the accepted epoch
+ok 14 - replayed old epoch cannot replace the accepted epoch
+  ---
+  duration_ms: 1.492708
+  type: 'test'
+  ...
+# Subtest: member cannot forge administrator transition
+ok 15 - member cannot forge administrator transition
+  ---
+  duration_ms: 2.108458
+  type: 'test'
+  ...
+# Subtest: unsigned roster modification and unknown schema fields are rejected
+ok 16 - unsigned roster modification and unknown schema fields are rejected
+  ---
+  duration_ms: 1.424083
+  type: 'test'
+  ...
+# Subtest: causal edits preserve history, verify authors and deduplicate
+ok 17 - causal edits preserve history, verify authors and deduplicate
+  ---
+  duration_ms: 2.203542
+  type: 'test'
+  ...
+# Subtest: concurrent edits retain both values, even if equal
+ok 18 - concurrent edits retain both values, even if equal
+  ---
+  duration_ms: 3.517875
+  type: 'test'
+  ...
+# Subtest: delete/edit conflict and explicit resolution preserve tombstone and history
+ok 19 - delete/edit conflict and explicit resolution preserve tombstone and history
+  ---
+  duration_ms: 2.185584
+  type: 'test'
+  ...
+# Subtest: stale resolution does not hide a later-delivered concurrent edit
+ok 20 - stale resolution does not hide a later-delivered concurrent edit
+  ---
+  duration_ms: 2.240209
+  type: 'test'
+  ...
+# Subtest: missing parent blocks readiness until it arrives
+ok 21 - missing parent blocks readiness until it arrives
+  ---
+  duration_ms: 1.499625
+  type: 'test'
+  ...
+# Subtest: cross-record parent cannot authorize a ready value
+ok 22 - cross-record parent cannot authorize a ready value
+  ---
+  duration_ms: 1.375584
+  type: 'test'
+  ...
+# Subtest: old epoch and revoked author changes rejected
+ok 23 - old epoch and revoked author changes rejected
+  ---
+  duration_ms: 1.341875
+  type: 'test'
+  ...
+# Subtest: tamper and caller mutation cannot change accepted history
+ok 24 - tamper and caller mutation cannot change accepted history
+  ---
+  duration_ms: 1.192625
+  type: 'test'
+  ...
+# Subtest: retired local log refuses additional ingest
+ok 25 - retired local log refuses additional ingest
+  ---
+  duration_ms: 0.966209
+  type: 'test'
+  ...
+# Subtest: parent duplicates and oversized payload rejected before signing
+ok 26 - parent duplicates and oversized payload rejected before signing
+  ---
+  duration_ms: 0.68575
+  type: 'test'
+  ...
+# Subtest: 20 deterministic delivery permutations converge with duplicates
+ok 27 - 20 deterministic delivery permutations converge with duplicates
+  ---
+  duration_ms: 31.7575
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 154.342292

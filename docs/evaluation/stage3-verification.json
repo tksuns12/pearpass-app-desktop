@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "base_commit": "c97772289b07fb4f54f3898ab5df108489983d87",
+  "overall_status": "EVALUATION_ONLY_REFERENCE_POLICY_NOT_APP_INTEGRATED",
+  "release_allowed": false,
+  "environment": {
+    "platform": "macOS arm64",
+    "node": "v22.23.2"
+  },
+  "app_change": "Disabled incomplete device-removal modal before broadcast, writer removal and success toast; this is not a global IPC gate.",
+  "reference_policy": {
+    "administrator_signatures": "Ed25519 via Node crypto",
+    "epoch_chain": "Pinned admin, predecessor, generation, new storage/key commitment, recipient membership",
+    "revisions": "Signed immutable per-revision keys with multi-value causal heads",
+    "automatic_use": "Reference selector blocks empty, incomplete, conflict, deleted and retired state",
+    "not_implemented": [
+      "App integration for record writes/reads/autofill",
+      "Device key envelopes and authenticated delivery",
+      "Migration of existing records/conflicts/tombstones",
+      "Durable cutover journal and crash recovery",
+      "Rollback detection after restoring the local trusted epoch itself",
+      "Physical device QR/LAN and mobile behavior"
+    ]
+  },
+  "tests": {
+    "model": {
+      "passed": 27,
+      "failed": 0,
+      "delivery_permutation_cases": 20,
+      "permutations_are_one_test": true
+    },
+    "engine_integration": {
+      "unique_tests": 2,
+      "repeated_runs": 3,
+      "passed_runs": 3,
+      "failed_runs": 0,
+      "conflict": "Both offline edits survived disk reopen; explicit resolution retained four revisions",
+      "key_isolation": "Actual identical ciphertext delivered to old-key store; new-key positive control read the marker while old-key attempt did not",
+      "transport": "In-process encrypted replication streams; no Hyperswarm",
+      "key_provisioning": "Fixture only, not the production pairing/key delivery protocol"
+    },
+    "full_desktop": {
+      "suites_passed": 109,
+      "tests_passed": 726,
+      "failed": 0,
+      "new_ui_tests": 4,
+      "new_ui_tests_are_subset": true,
+      "snapshots": 13
+    },
+    "bootstrap_guard": {
+      "passed": 21
+    },
+    "existing_chain": {
+      "passed": 1
+    },
+    "baseline_revocation_probe": {
+      "exit_code": 2,
+      "acceptance": "FAIL remains; basic removeWriter is not secrecy revocation"
+    }
+  },
+  "build": {
+    "initial_exit": 2,
+    "initial_failure": "New test beforeEach returned Jest instead of void",
+    "fix": "Use block-bodied callback; assertions unchanged",
+    "final_exit": 0
+  },
+  "lint": {
+    "exit_code": 0,
+    "note": "Existing unrelated warnings remain"
+  },
+  "preflight": {
+    "schema_version": 1,
+    "scope": "evaluation-bootstrap",
+    "node": "22.23.2",
+    "checks": [
+      {
+        "id": "NODE_BASELINE",
+        "status": "PASS",
+        "detail": "actual=22.23.2; upstream=22.12.0; same-major >= baseline required; select a reviewed patched runtime"
+      },
+      {
+        "id": "LOCKFILE_UNCHANGED",
+        "status": "PASS",
+        "detail": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08"
+      },
+      {
+        "id": "DEPENDENCIES_UNCHANGED",
+        "status": "PASS",
+        "detail": "No dependency upgrade is part of this bootstrap"
+      },
+      {
+        "id": "UPSTREAM_OTA_OFF",
+        "status": "PASS",
+        "detail": "App OTA channels and package publish targets must be empty"
+      },
+      {
+        "id": "RELEASE_SCRIPTS_BLOCKED",
+        "status": "PASS",
+        "detail": "Supported package/release scripts must fail closed"
+      },
+      {
+        "id": "DEPENDENCIES_PRESENT",
+        "status": "PASS",
+        "detail": "Presence only, not native-binary or runtime verification"
+      },
+      {
+        "id": "CORE_BASELINE_DIVERGENCE",
+        "status": "REVIEW",
+        "detail": "app lock=a2f686326cd41b14782be78168a04dfaa31beaa6; fork main=7c833475a7335a0a7b1d340c474433af8be23289; do not silently substitute"
+      },
+      {
+        "id": "NETWORK_ISOLATION",
+        "status": "NOT_RUN",
+        "detail": "Disabling OTA is NOT proof of LAN-only or zero external infrastructure"
+      },
+      {
+        "id": "five_platform_build",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "a_to_b_to_c_replication",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "concurrent_secret_conflicts",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "revocation_and_key_rotation",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "cold_lan_pairing_without_external_services",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "crash_recovery_and_backup_restore",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      },
+      {
+        "id": "mobile_background_sync",
+        "status": "NOT_RUN",
+        "detail": "Requires actual app/core integration tests; not covered by profile unit tests"
+      }
+    ],
+    "blocked": false
+  },
+  "original_lock_unchanged": true,
+  "original_lock_sha256": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08",
+  "dependencies_changed": false,
+  "native_builds_or_app_launch_this_stage": false,
+  "main_changed": false,
+  "production_data_migrated": false,
+  "command_history": [
+    {
+      "name": "model",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-model"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 0.44
+    },
+    {
+      "name": "integration",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-integration"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.15
+    },
+    {
+      "name": "integration-repeat-2",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-integration"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.05
+    },
+    {
+      "name": "integration-repeat-3",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy-integration"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.06
+    },
+    {
+      "name": "bootstrap",
+      "command": [
+        "npm",
+        "run",
+        "eval:test"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 0.37
+    },
+    {
+      "name": "chain",
+      "command": [
+        "npm",
+        "run",
+        "eval:engine"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 1.05
+    },
+    {
+      "name": "baseline-gap",
+      "command": [
+        "npm",
+        "run",
+        "eval:policy"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "expectation_met": true,
+      "seconds": 0.72
+    },
+    {
+      "name": "full-jest",
+      "command": [
+        "npm",
+        "test",
+        "--",
+        "--runInBand"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 11.12
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 0,
+      "expectation_met": false,
+      "seconds": 6.53
+    },
+    {
+      "name": "lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "expectation_met": true,
+      "seconds": 6.03
+    }
+  ],
+  "experiment_correction": "Initially assumed modern writer header; corrected for pinned manifest compatibility mode. Ciphertext equality and positive/negative plaintext controls retained."
+}

@@ -134,7 +134,9 @@
     "eval:install-pinned": "python3 scripts/evaluation/install-pinned.py",
     "eval:engine": "node --test scripts/evaluation/engine-chain.test.mjs",
     "eval:policy": "node scripts/evaluation/engine-policy-probe.mjs",
-    "eval:prepare-ui": "python3 scripts/evaluation/prepare-ui.py"
+    "eval:prepare-ui": "python3 scripts/evaluation/prepare-ui.py",
+    "eval:policy-model": "node --test scripts/evaluation/policy/signed-policy.test.mjs scripts/evaluation/policy/automatic-value.test.mjs",
+    "eval:policy-integration": "node --test scripts/evaluation/policy/engine-policy.integration.test.mjs"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",
