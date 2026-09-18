@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "base_commit": "5ea2729c0e728b699fbc139d634e805418d0b38e",
+  "overall_status": "EVALUATION_ONLY_NOT_PRODUCTION_READY",
+  "environment": {
+    "os": "macOS",
+    "architecture": "arm64",
+    "evaluation_node": "22.23.2",
+    "npm": "10.9.8",
+    "default_node_after": "19.9.0"
+  },
+  "dependency_install": {
+    "upstream_npm_ci": "INTERRUPTED after Git prepare hooks were observed despite ignore-scripts",
+    "replacement": "Separate exact-commit archive install, original app manifest dependencies and lock retained",
+    "original_lock_sha256": "5887f82727b0ee61b921d276485cf5fb58f42bba831f868a1ec07c3edb530a08",
+    "original_lock_unchanged": true,
+    "installed_package_count": 1675,
+    "observed_lifecycle_headers_in_replacement": 0,
+    "git_archive_count": 20,
+    "ui_build_tools": {
+      "ui_source_lock_sha256": "fd7bbfb06f2bd1aaa9da1af55acacfe39fb03211909f256e171e51887af2d2da",
+      "scope": "build-only, dependency closure of upstream UI-kit lock",
+      "versions": {
+        "react-native": "0.79.5",
+        "react-native-svg": "15.11.2",
+        "react-native-reanimated": "3.17.5"
+      },
+      "locked_packages": 368,
+      "build_exit_code": 0,
+      "install_hooks_enabled": false,
+      "original_app_lock_modified": false
+    },
+    "electron_binary_installer": "Reviewed and explicitly executed; initial lifecycle hooks were not broadly re-enabled"
+  },
+  "tests": {
+    "profile": {
+      "passed": 21,
+      "failed": 0
+    },
+    "selected_electron": {
+      "suites": 6,
+      "passed": 33,
+      "failed": 0
+    },
+    "engine_chain": {
+      "unique_tests": 1,
+      "repeated_runs": 5,
+      "passed_runs": 5,
+      "failed_runs": 0,
+      "transport": "in-memory encrypted replication streams; no Hyperswarm instances",
+      "real_components": [
+        "Autopass 3.3.0",
+        "Autobase 7.28.1",
+        "Corestore 7.9.2",
+        "Hypercore 11.30.2"
+      ],
+      "assertions": [
+        "Only A-B and B-C streams allowed",
+        "C initially lacks A edit",
+        "A closes before final B-C transfer",
+        "B closes and reopens persisted store before relaying",
+        "Reverse C-B-A succeeds after C closes"
+      ],
+      "not_tested": [
+        "QR pairing",
+        "physical devices",
+        "NAT traversal",
+        "background scheduling"
+      ]
+    }
+  },
+  "policy_probe": {
+    "scope": "locked Autopass engine only; not QR/UI/OS end-to-end",
+    "versions": {
+      "autopass": "3.3.0",
+      "autobase": "7.28.1",
+      "corestore": "7.9.2"
+    },
+    "concurrent_edit": {
+      "converged": true,
+      "current_view": {
+        "value": "DUMMY_EDIT_B",
+        "file": null
+      },
+      "current_view_exposes_both_versions": false,
+      "history_erasure": "NOT_TESTED",
+      "app_conflict_handling": "NOT_TESTED",
+      "requirement_status": "NEEDS_EXPLICIT_CONFLICT_POLICY"
+    },
+    "writer_removal": {
+      "removed_peer_writable": false,
+      "base_encryption_key_changed": false,
+      "removed_peer_read_new_value": true,
+      "secrecy_revocation_requirement": "FAIL",
+      "app_rekey_workflow": "NOT_TESTED"
+    },
+    "exit_code": 2
+  },
+  "macos_startup": {
+    "status": "OBSERVED",
+    "markers": [
+      "PEARPASS_MAIN_READY",
+      "WORKLET_SPAWNED mode=bare-sidecar",
+      "WORKLET_READY via=ipc-stream",
+      "VAULT_CLIENT_READY",
+      "WINDOW_CREATED"
+    ],
+    "rpc_responses_observed": [
+      "STORAGE_PATH_SET",
+      "MASTER_VAULT_GET_STATUS",
+      "ACTIVE_VAULT_GET_STATUS",
+      "ENCRYPTION_GET_STATUS",
+      "ENCRYPTION_INIT",
+      "ENCRYPTION_GET",
+      "MASTER_PASSWORD_STATUS"
+    ],
+    "profile": "LocalVault-Evaluation-tksuns12",
+    "upstream_ota": "disabled",
+    "real_credentials_entered": false,
+    "known_runtime_warning": "FFmpeg Unsupported pixel format: -1; UI/media visual verification still pending",
+    "stopped_after_probe": true,
+    "full_vault_crud_and_visual_test": "NOT_RUN"
+  },
+  "commands": [
+    {
+      "name": "ui-typecheck",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 5.82
+    },
+    {
+      "name": "desktop-build",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 7.85
+    },
+    {
+      "name": "profile-tests",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 0.36
+    },
+    {
+      "name": "electron-tests",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.95
+    },
+    {
+      "name": "chain-repeat-1",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.32
+    },
+    {
+      "name": "chain-repeat-2",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.19
+    },
+    {
+      "name": "chain-repeat-3",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.19
+    },
+    {
+      "name": "chain-repeat-4",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.16
+    },
+    {
+      "name": "chain-repeat-5",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 1.2
+    },
+    {
+      "name": "policy-probe",
+      "exit_code": 2,
+      "expected_process_exit": 2,
+      "seconds": 0.96,
+      "secrecy_revocation_acceptance": "FAIL; exit 2 records the reproduced engine gap"
+    },
+    {
+      "name": "preflight",
+      "exit_code": 0,
+      "expected_process_exit": 0,
+      "seconds": 0.29
+    }
+  ],
+  "remaining_gates": [
+    "Five-platform native builds",
+    "Physical-device QR and cold-LAN pairing",
+    "No-external-infrastructure network test",
+    "App-level conflict preservation",
+    "App-level revocation/rekey",
+    "Crash recovery and backup restore",
+    "Mobile background behavior",
+    "Independent release signing and update channels"
+  ],
+  "release_allowed": false
+}

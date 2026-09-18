@@ -1,0 +1,27 @@
+{
+  "scope": "locked Autopass engine only; not QR/UI/OS end-to-end",
+  "versions": {
+    "autopass": "3.3.0",
+    "autobase": "7.28.1",
+    "corestore": "7.9.2"
+  },
+  "concurrent_edit": {
+    "converged": true,
+    "current_view": {
+      "value": "DUMMY_EDIT_B",
+      "file": null
+    },
+    "current_view_exposes_both_versions": false,
+    "history_erasure": "NOT_TESTED",
+    "app_conflict_handling": "NOT_TESTED",
+    "requirement_status": "NEEDS_EXPLICIT_CONFLICT_POLICY"
+  },
+  "writer_removal": {
+    "removed_peer_writable": false,
+    "base_encryption_key_changed": false,
+    "removed_peer_read_new_value": true,
+    "secrecy_revocation_requirement": "FAIL",
+    "app_rekey_workflow": "NOT_TESTED"
+  },
+  "exit_code": 2
+}

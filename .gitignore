@@ -73,3 +73,6 @@ out/
 src/PearPass
 # Added for independent evaluation, 2026-09-18.
 .evaluation-reports/
+
+# Derived exact-commit evaluation installation; original lock stays unchanged.
+.evaluation-install/

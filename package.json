@@ -130,7 +130,11 @@
     "knip": "knip",
     "eval:test": "node --test scripts/evaluation/profile.test.cjs",
     "eval:preflight": "node scripts/evaluation/preflight.mjs",
-    "dev:eval": "node scripts/evaluation/dev.mjs"
+    "dev:eval": "node scripts/evaluation/dev.mjs",
+    "eval:install-pinned": "python3 scripts/evaluation/install-pinned.py",
+    "eval:engine": "node --test scripts/evaluation/engine-chain.test.mjs",
+    "eval:policy": "node scripts/evaluation/engine-policy-probe.mjs",
+    "eval:prepare-ui": "python3 scripts/evaluation/prepare-ui.py"
   },
   "devDependencies": {
     "@babel/core": "7.26.10",

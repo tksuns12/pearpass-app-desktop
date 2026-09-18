@@ -1,0 +1,142 @@
+[
+  {
+    "package": "node_modules/@electron/node-gyp",
+    "repository": "electron/node-gyp",
+    "commit": "06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "source": "https://codeload.github.com/electron/node-gyp/tar.gz/06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "integrity": "sha512-MXgzlTDEEndJB3TBbvd5uFQO/8gaINo1Hfen8vef5rq/VHVPeB63uuv/uO5+8GFsAJ/rauu6XB79S6K4+aXc+w=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-lib-feedback",
+    "repository": "tetherto/pear-apps-lib-feedback",
+    "commit": "6c5df8c71efb303ea980214789147ccf7528a06c",
+    "source": "https://codeload.github.com/tetherto/pear-apps-lib-feedback/tar.gz/6c5df8c71efb303ea980214789147ccf7528a06c",
+    "integrity": "sha512-r8rdrGpvBlxG2xF2KB/Ifao0u8r3HKxF2U45xhV6j6DmGNgNQZBYU4JYncpgdVwSTaFWjb3A6w+BVFtpsEJNVw=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-lib-ui-react-hooks",
+    "repository": "tetherto/pear-apps-lib-ui-react-hooks",
+    "commit": "e80d01ebdb02f7011e2f28a52a01447dcec0c645",
+    "source": "https://codeload.github.com/tetherto/pear-apps-lib-ui-react-hooks/tar.gz/e80d01ebdb02f7011e2f28a52a01447dcec0c645",
+    "integrity": "sha512-/Y7QJWkjCYBV/eQKJZeyimkVWJ2YSJeKNBln4AHykg+ZALZA5Ze7lWEToCDwZk5IhTT4K6GgQDpSv+OsYPhwSQ=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-avatar-initials",
+    "repository": "tetherto/pear-apps-utils-avatar-initials",
+    "commit": "3aeaa8a0fe9843e33ffcc60eb60f9e792f4549ef",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-avatar-initials/tar.gz/3aeaa8a0fe9843e33ffcc60eb60f9e792f4549ef",
+    "integrity": "sha512-/Ye3FC5zUUC7SDqmZWYUAp1qCHtbi7iPdUNAc14ZF2jSEnmwqBN73dSuR2EOOkasCXrdH17djxMY7EZG9irBgw=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-date",
+    "repository": "tetherto/pear-apps-utils-date",
+    "commit": "725df1bf2b2f997d16f8400565bf8743d03ec127",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-date/tar.gz/725df1bf2b2f997d16f8400565bf8743d03ec127",
+    "integrity": "sha512-GkO/8VEE7zyRzqafZ54yzdpdMjrdX2+vIS3/4DG655oHixxwMMn1RmwZ5hGjXRvYUk4Oh7Nhmc1pdL/j/UzLcw=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-generate-unique-id",
+    "repository": "tetherto/pear-apps-utils-generate-unique-id",
+    "commit": "9525e967094b84ed925ad1744ad33cb5ffb5c4b3",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-generate-unique-id/tar.gz/9525e967094b84ed925ad1744ad33cb5ffb5c4b3",
+    "integrity": "sha512-IA6BhFNzfe4AE/Bxt0YMoODeXd8rO7iSfrEm40mOChsFF+edjyFBrk1/MeDp/fYfaMyIem5Bc6vNmkGFUB+IYw=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-pattern-search",
+    "repository": "tetherto/pear-apps-utils-pattern-search",
+    "commit": "57d12e880be81e794bb1332a7870ce50c7b164f2",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-pattern-search/tar.gz/57d12e880be81e794bb1332a7870ce50c7b164f2",
+    "integrity": "sha512-t2s3sGgkedYWubwV1SaVF0LeVSnwoyCob6vRVUW34KPOKpmUcWm8EAWeEBJHv9WNmGVCPfe8QCrGO95tJ6reZw=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-qr",
+    "repository": "tetherto/pear-apps-utils-qr",
+    "commit": "c5e3955e024b46a07f8281bfd77d13b242c8a7b1",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-qr/tar.gz/c5e3955e024b46a07f8281bfd77d13b242c8a7b1",
+    "integrity": "sha512-zFFGswZGaYyAYot8k46rRgfiKaAb6+EgJisj/9kap8lA31LGpGXdgP3hLi+VwzoT6cQQZX/kdgrgAJq9++9FiA=="
+  },
+  {
+    "package": "node_modules/@tetherto/pear-apps-utils-validator",
+    "repository": "tetherto/pear-apps-utils-validator",
+    "commit": "7e3517f5f7ae31d8dee33ea5b191adcb3e47fe45",
+    "source": "https://codeload.github.com/tetherto/pear-apps-utils-validator/tar.gz/7e3517f5f7ae31d8dee33ea5b191adcb3e47fe45",
+    "integrity": "sha512-eKO/iOUFoVEcHrOnGQ0sT1oTCB6iFGlDyEVVX32Fd/+/P4nF2xsaHqYQDI6m5fqYSU3CVuFuU2wUWQAEB090LA=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-constants",
+    "repository": "tetherto/pearpass-lib-constants",
+    "commit": "7fecf45fbe21de6addea1eaefb7867ac05cb8410",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-constants/tar.gz/7fecf45fbe21de6addea1eaefb7867ac05cb8410",
+    "integrity": "sha512-InrkWfT8nd7wztq1cqOgnRdMcCEEWzJMurP38G5w/8S6BSUvXEn7GSv4w5axvh3+gWM6TEwX4va9CiBodnok1g=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-data-export",
+    "repository": "tetherto/pearpass-lib-data-export",
+    "commit": "bd05b345a4372b17ba3aaa899e3bcad911745178",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-data-export/tar.gz/bd05b345a4372b17ba3aaa899e3bcad911745178",
+    "integrity": "sha512-djkCfnTRgaP1p1rROvsQ3fQLX2hxPXsfkdOKmPAUeW8e0pYAipd5qoGJDi3qgg63a7D7THITtqmp4reWUFDEew=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-data-import",
+    "repository": "tetherto/pearpass-lib-data-import",
+    "commit": "6e1c91448fcf0dde63e4e49b5eea2914a8985213",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-data-import/tar.gz/6e1c91448fcf0dde63e4e49b5eea2914a8985213",
+    "integrity": "sha512-pZ7bn0nI89OFfk/MuGyz0dKNbitI5P/07wjJKKK0vFv17tCu5Qpx1EuJWcDyniIkP0O/koaJXS9UeQ0sksCDVQ=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-native-messaging-bridge",
+    "repository": "tetherto/pearpass-lib-native-messaging-bridge",
+    "commit": "3ef96364e6749608aae538ccc41ac5e66d832e21",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-native-messaging-bridge/tar.gz/3ef96364e6749608aae538ccc41ac5e66d832e21",
+    "integrity": "sha512-oar4Jfc80Qg+Y05v0gOf8MMcbF0MbmIyf3c+KT6UdKAUpWJhUwGtsbR5KDc8fPveAVUsFPTzuJu5W7+Q1RLwXA=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-ui-kit",
+    "repository": "tetherto/pearpass-lib-ui-react-native-components",
+    "commit": "43e610d1b3a3c91168b02c8a0a5e8c4269d3e42d",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-ui-react-native-components/tar.gz/43e610d1b3a3c91168b02c8a0a5e8c4269d3e42d",
+    "integrity": "sha512-jbml6nzqLfwp9mCZe/ykx3PA/wpk+t4JpZR4oU0QXN6a9JiU9KjxGySoiboISgIIvvP7dl0BNLvONmE8Y+0Wag=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-vault",
+    "repository": "tetherto/pearpass-lib-vault",
+    "commit": "f9ef75ef74b459d07b296558720f3b45b70309ce",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-vault/tar.gz/f9ef75ef74b459d07b296558720f3b45b70309ce",
+    "integrity": "sha512-WKoI6t8+oO2MGpaTxmIteO2oIQz33dgS/gXvPH+wWtMMcRvet7bp05Pm9ZjXy+gGy1q77XWblQew/Yx2aTOxqg=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-lib-vault-core",
+    "repository": "tetherto/pearpass-lib-vault-core",
+    "commit": "a2f686326cd41b14782be78168a04dfaa31beaa6",
+    "source": "https://codeload.github.com/tetherto/pearpass-lib-vault-core/tar.gz/a2f686326cd41b14782be78168a04dfaa31beaa6",
+    "integrity": "sha512-pvflDxk+U2yfEf+w0Rm/Xq6DJGoCAauI6qWTO8UYnR8DzwBd/kZvr0qeNJvhh3d1J8EGMkWx7E9BPGJA/uqE7A=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-utils-password-check",
+    "repository": "tetherto/pearpass-utils-password-check",
+    "commit": "8af54c1f1dabf8be6fe2c1bf891d1d68c7c4a0e4",
+    "source": "https://codeload.github.com/tetherto/pearpass-utils-password-check/tar.gz/8af54c1f1dabf8be6fe2c1bf891d1d68c7c4a0e4",
+    "integrity": "sha512-LjzAE3pttSzT64XhYFuVBoS0PRU5/DJgK5YcacsiukEfeRk1+aU9ZegG8j5J9nj+I6GqOm0jBTjZygyuD8isEA=="
+  },
+  {
+    "package": "node_modules/@tetherto/pearpass-utils-password-generator",
+    "repository": "tetherto/pearpass-utils-password-generator",
+    "commit": "9045d47f7e40f50639cdb41b5666ef1c9f895f5b",
+    "source": "https://codeload.github.com/tetherto/pearpass-utils-password-generator/tar.gz/9045d47f7e40f50639cdb41b5666ef1c9f895f5b",
+    "integrity": "sha512-PfJztiJzJLJ9xmroDeQLKPUaXGIbf+5AzixOYSoW8AowOmQkOweR4HxZeiXPtrVCWnELMFhZHZsbWFMn0cbAfQ=="
+  },
+  {
+    "package": "node_modules/@tetherto/tether-dev-docs",
+    "repository": "tetherto/tether-dev-docs",
+    "commit": "64c264c34e8255360ca6c805457119168c789583",
+    "source": "https://codeload.github.com/tetherto/tether-dev-docs/tar.gz/64c264c34e8255360ca6c805457119168c789583",
+    "integrity": "sha512-aMgE0ADJBcxBgsBHH/BV8wLxnvbCQZteaVo6bm8B3v/qXuOf8FXvgO9DRa9RowY+mawSZrgVD1KYlu2DDDF3zw=="
+  },
+  {
+    "package": "node_modules/electron-windows-msix",
+    "repository": "chetasr/electron-windows-msix",
+    "commit": "b53dcd40a570937a362e19e25c2bf39d5889c003",
+    "source": "https://codeload.github.com/chetasr/electron-windows-msix/tar.gz/b53dcd40a570937a362e19e25c2bf39d5889c003",
+    "integrity": "sha512-HLuQLKYCB4fl+fRc4sl7BpX8gY4PehvWBhbrFd3CoypjeTdOOfcIYltOwKDDSv/dPzjaSt6We04jIKjwbuXL0w=="
+  }
+]
